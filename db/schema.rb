@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421161217) do
+ActiveRecord::Schema.define(version: 20160422074403) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
@@ -19,20 +19,28 @@ ActiveRecord::Schema.define(version: 20160421161217) do
     t.time     "time"
     t.integer  "provider"
     t.integer  "fee"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "people"
+    t.integer  "service_hour"
+    t.boolean  "paid",         default: false
   end
+
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
 
   create_table "payments", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "booking_id"
     t.string   "payment_method"
     t.integer  "amount"
-    t.boolean  "paid"
+    t.boolean  "paid",           default: false
     t.text     "params"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
+
+  add_index "payments", ["booking_id"], name: "index_payments_on_booking_id"
+  add_index "payments", ["user_id"], name: "index_payments_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
