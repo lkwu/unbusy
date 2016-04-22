@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422074403) do
+ActiveRecord::Schema.define(version: 20160422163153) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "date"
-    t.time     "time"
     t.integer  "provider"
     t.integer  "fee"
     t.datetime "created_at",                   null: false
@@ -24,6 +23,8 @@ ActiveRecord::Schema.define(version: 20160422074403) do
     t.integer  "people"
     t.integer  "service_hour"
     t.boolean  "paid",         default: false
+    t.boolean  "morning"
+    t.boolean  "afternoon"
   end
 
   add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
