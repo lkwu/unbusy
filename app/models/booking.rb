@@ -15,5 +15,19 @@ class Booking < ActiveRecord::Base
   # end
 # ------------------------------------------------------------------
 
+  def self.remaining_of_masseur_morning( date )
+      masseur=Booking.where( date: date.to_date, morning: true).sum(:masseur)
+      return 10 - masseur
+  end
+  
+  def self.remaining_of_masseur_afternoon( date )
+      masseur=Booking.where( date: date.to_date, afternoon: true).sum(:masseur)
+      return 10 - masseur
+  end
+
+
+
+
+
 
 end
