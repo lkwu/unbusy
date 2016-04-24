@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
-  
+
+  has_many :bookings
 
   def self.from_omniauth(auth)
     # Case 1: Find existing user by facebook uid
@@ -38,10 +39,10 @@ class User < ActiveRecord::Base
   end
 
 # -----------------------API-------------------------------------------------
-  
+
 
   before_create :generate_authentication_token
-  
+
 
     #這是給token的方法
   def generate_authentication_token

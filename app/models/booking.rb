@@ -15,5 +15,6 @@ class Booking < ActiveRecord::Base
   # end
 # ------------------------------------------------------------------
 
+  has_many :payments
 
 end

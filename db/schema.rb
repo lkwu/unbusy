@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160422163153) do
+ActiveRecord::Schema.define(version: 20160424065417) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(version: 20160422163153) do
     t.boolean  "paid",         default: false
     t.boolean  "morning"
     t.boolean  "afternoon"
+    t.integer  "email"
   end
 
+  add_index "bookings", ["email"], name: "index_bookings_on_email"
   add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
 
   create_table "payments", force: :cascade do |t|

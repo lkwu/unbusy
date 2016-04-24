@@ -10,9 +10,18 @@ Rails.application.routes.draw do
   scope :path => '/api/v1/', :module => "api_v1", :as => 'v1', :defaults => { :format => :json } do
     post "/login" => "auth#login"
     post "/logout" => "auth#logout"
-    
+
   end
-  
+
+  post 'pay2go/return' # returnURL是Pay2go通知使用者付款成功
+  post 'pay2go/notify' # notifyURL是Pay2go用來通知店家後台交易結果的URL
+
+  resources :bookings do
+    member do
+      post :checkout_pay2go
+    end
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
