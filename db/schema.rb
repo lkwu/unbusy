@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160424065417) do
     t.boolean  "paid",         default: false
     t.boolean  "morning"
     t.boolean  "afternoon"
-    t.integer  "email"
+    t.string   "email"
   end
 
   add_index "bookings", ["email"], name: "index_bookings_on_email"

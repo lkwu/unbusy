@@ -1,0 +1,8 @@
+
+
+<% if @booking.paid %>
+  <p>已付款</p>
+<% else %>
+  <p>請付款</p>
+  <%= link_to "刷卡", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post %>
+<% end %>

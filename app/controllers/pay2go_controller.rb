@@ -5,7 +5,7 @@ class Pay2goController < ApplicationController
   def return #returnURL: Pay2go用來通知使用者付款成功
     result = nil
 
-    ActiveRacord::Base.transaction do
+    ActiveRecord::Base.transaction do
       @payment = Payment.find_and_process( json_data )
       result = @payment.save
     end
@@ -21,16 +21,23 @@ class Pay2goController < ApplicationController
       @booking.save!
       # And then Pay2go will send a paid email to user
     end
+
+    redirect_to booking_path(@booking)
   end
 
   def notify #notifyURL: Pay2go用來通知店家後台交易成功
     result = nil
 
-    ActiveRacord::Base.transaction do
+    ActiveRecord::Base.transaction do
       @payment = PaymentPay2go.find_and_process( json_data )
       result = @payment.save
     end
 
+    if result
+      render :text => "1|OK"
+    else
+      render :text => "0|ErrorMessage"
+    end
   end
 
   def json_data

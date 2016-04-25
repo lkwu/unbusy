@@ -3,7 +3,7 @@ class Payment < ActiveRecord::Base
 
   serialize :params, JSON
 
-  def self_find_and_process(params)
+  def self.find_and_process(params)
     result = JSON.parse( params['Result'] )
 
     payment = self.find( result['MerchantOrderNo'].to_i )
