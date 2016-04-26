@@ -4,7 +4,7 @@ class CreateBookings < ActiveRecord::Migration
 
       t.integer :user_id
       t.date :date
-      t.time :time
+      t.string :time
       t.integer :provider
       t.integer :fee
 

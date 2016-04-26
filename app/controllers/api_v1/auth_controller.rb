@@ -1,6 +1,19 @@
 class ApiV1::AuthController < ApiController
   before_action :authenticate_user!, :only => [:logout]
 
+  def signup
+    @user = User.new
+    if params[:email] && params[:password]
+      @user.email = params[:email]
+      @user.password = params[:password]
+      @user.save!
+      render :json => { :message => "ok" }
+    end
+  end
+
+
+
+
   def login
     # user = User.find_by_email( params[:email] )
 
