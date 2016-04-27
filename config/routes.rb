@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     post "/login" => "auth#login"
     post "/logout" => "auth#logout"
 
+    post "/checkout_pay2go" => "payment_method#Credit"
+
   end
 
   post 'pay2go/return' # returnURL是Pay2go通知使用者付款成功
