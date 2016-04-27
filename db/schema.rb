@@ -11,21 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160424065417) do
+
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "date"
-    t.integer  "provider"
+    t.string   "time"
     t.integer  "fee"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.integer  "people"
     t.integer  "service_hour"
     t.boolean  "paid",         default: false
+
     t.boolean  "morning"
     t.boolean  "afternoon"
     t.string   "email"
+
   end
 
   add_index "bookings", ["email"], name: "index_bookings_on_email"
@@ -66,6 +70,8 @@ ActiveRecord::Schema.define(version: 20160424065417) do
     t.string   "fb_token"
     t.boolean  "admin"
     t.string   "authentication_token"
+    t.string   "remark"
+    t.string   "contact_email"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true

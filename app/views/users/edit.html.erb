@@ -1,0 +1,36 @@
+<h2>填寫公司資料</h2>
+<%= form_for @user do |u| %>
+ <ul>
+  <li>
+   <%= u.label :company, '公司名稱' %>
+   <%= u.text_field :company %>
+  </li>
+  <li>
+   <%= u.label :username, '聯絡人' %>
+   <%= u.text_field :username %>
+  </li>
+  <li>
+   <%= u.label :phone, '聯絡電話' %>
+   <%= u.text_field :phone %> 
+  </li>
+  <li>
+   <%= u.label :contact_email, '聯絡E-mail' %>
+   <%= u.text_field :contact_email %>
+  </li>
+  <li>
+   <%= u.label :address, '公司地址' %>
+   <%= u.text_field :address %>
+  </li>
+  <li>
+   <%= u.label :remark, '備註' %>
+   <%= u.text_area :remark %>
+  </li> 
+
+  <%= hidden_field_tag :booking_id, params[:booking_id] %>
+
+  </ul>
+   <%= u.submit '修改需求' %> 
+   <%= u.submit '預約確認' %> 
+  <%end%>
+
+

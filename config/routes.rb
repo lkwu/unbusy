@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     post "/login" => "auth#login"
     post "/logout" => "auth#logout"
 
+    post "/signup" => "auth#signup"
     post "/checkout_pay2go" => "payment_method#Credit"
 
   end
@@ -18,8 +19,12 @@ Rails.application.routes.draw do
   post 'pay2go/return' # returnURL是Pay2go通知使用者付款成功
   post 'pay2go/notify' # notifyURL是Pay2go用來通知店家後台交易結果的URL
 
+  resources :users do
+  end
   resources :bookings do
+    get :login
     member do
+
       post :checkout_pay2go
     end
   end

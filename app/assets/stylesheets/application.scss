@@ -12,4 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-datepicker3
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "style";
+@import "fullcalendar";
+//@import "fullcalendar.print";
