@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423073806) do
+ActiveRecord::Schema.define(version: 20160426172509) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(version: 20160423073806) do
     t.string   "fb_token"
     t.boolean  "admin"
     t.string   "authentication_token"
+    t.string   "remark"
+    t.string   "contact_email"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true

@@ -10,15 +10,42 @@ class BookingsController < ApplicationController
     
     def create
       @booking = Booking.new(booking_params)
-      @booking.save
-      if current_user
-        redirect_to bookings_path
+      @booking.user = current_user
+      if @booking.save
+        if current_user
+          redirect_to edit_user_path(current_user, :booking_id => @booking.id)
+        else
+      	  redirect_to  booking_login_url(@booking)
+        end
       else
-      	redirect_to  booking_login_url(@booking)
+        redirect_to :back	
       end
     end
 
     def login
+    end
+
+    def show
+      @booking = Booking.find(params[:id])
+      @user = @booking.user
+    end
+
+    def edit
+      @booking = Booking.find(params[:id])
+      if current_user == @booking.user
+        @user = @booking.user
+      else
+      	redirect_to root_path
+      end
+    end
+
+    def update
+      @booking = Booking.find(params[:id])
+      if @booking.update(booking_params)
+        redirect_to edit_user_path(@booking.user, :booking_id => @booking.id)
+      else
+        render :back
+      end
     end
 
 
