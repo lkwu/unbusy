@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   resources :users do
   end
   resources :bookings do
-    get :login
   end
   
 

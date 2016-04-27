@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-    
+    # before_action :authenticate_user!, :only => [:create]
     def index
       @bookings = Booking.all
     end
@@ -10,15 +10,15 @@ class BookingsController < ApplicationController
     
     def create
       @booking = Booking.new(booking_params)
-      @booking.user = current_user
-      if @booking.save
-        if current_user
-          redirect_to edit_user_path(current_user, :booking_id => @booking.id)
+      if current_user
+        @booking.user = current_user
+        if @booking.save
+          redirect_to edit_user_path(current_user, :booking_id => @booking)
         else
-      	  redirect_to  booking_login_url(@booking)
+          redirect_to :back 
         end
       else
-        redirect_to :back	
+      	  redirect_to new_session_path(:user, :booking_id => @booking)
       end
     end
 
