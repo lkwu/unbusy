@@ -11,19 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426172509) do
+ActiveRecord::Schema.define(version: 20160428134545) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "date"
     t.string   "time"
     t.integer  "fee"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "people"
     t.integer  "service_hour"
-    t.boolean  "paid",         default: false
+    t.boolean  "paid",          default: false
     t.integer  "masseur"
+    t.string   "phone"
+    t.text     "address"
+    t.string   "company"
+    t.text     "remark"
+    t.string   "contact_email"
+    t.string   "username"
   end
 
   add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
@@ -43,12 +49,8 @@ ActiveRecord::Schema.define(version: 20160426172509) do
   add_index "payments", ["user_id"], name: "index_payments_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "phone"
-    t.text     "address"
-    t.string   "company"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -63,8 +65,6 @@ ActiveRecord::Schema.define(version: 20160426172509) do
     t.string   "fb_token"
     t.boolean  "admin"
     t.string   "authentication_token"
-    t.string   "remark"
-    t.string   "contact_email"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true

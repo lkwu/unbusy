@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-    # before_action :authenticate_user!, :only => [:create]
+    
     def index
       @bookings = Booking.all
     end
@@ -22,8 +22,6 @@ class BookingsController < ApplicationController
       end
     end
 
-    def login
-    end
 
     def show
       @booking = Booking.find(params[:id])
@@ -40,11 +38,23 @@ class BookingsController < ApplicationController
     end
 
     def update
-      @booking = Booking.find(params[:id])
-      if @booking.update(booking_params)
-        redirect_to edit_user_path(@booking.user, :booking_id => @booking.id)
+      if params[:booking_id]
+        if params[:commit] == "修改需求"
+          @booking = Booking.find(params[:booking_id])
+          @booking.update(booking_params)
+          redirect_to edit_booking_path(@booking)
+        elsif params[:commit] == "預約確認"
+          @booking = Booking.find(params[:booking_id])
+          @booking.update(booking_params)
+          redirect_to booking_path(params[:booking_id], :user_id => @user)
+        end  
       else
-        render :back
+        @booking = Booking.find(params[:id])
+        if @booking.update(booking_params)
+          redirect_to edit_user_path(@booking.user, :booking_id => @booking.id)
+        else
+          render :back
+        end
       end
     end
 
@@ -54,7 +64,7 @@ class BookingsController < ApplicationController
 
 
   def booking_params
-    params.require(:booking).permit( :date, :time, :people, :service_hour) 
+    params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark) 
   end
 
 

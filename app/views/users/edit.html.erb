@@ -1,5 +1,5 @@
 <h2>填寫公司資料</h2>
-<%= form_for @user do |u| %>
+<%= form_for @booking do |u| %>
  <ul>
   <li>
    <%= u.label :company, '公司名稱' %>
@@ -29,8 +29,8 @@
   <%= hidden_field_tag :booking_id, params[:booking_id] %>
 
   </ul>
-   <%= u.submit '修改需求' %> 
-   <%= u.submit '預約確認' %> 
-  <%end%>
+  <%= u.submit '修改需求' %> 
+  <%= u.submit '預約確認' %> 
+<%end%>
 
 
