@@ -1,18 +1,21 @@
-module ApplicationHelper
+class Pay2go
+  def initialize(payment)
+    @payment = payment
+  end
 
-  def generate_pay2go_params(payment)
+  def generate_pay2go_params
       pay2go_params = {
         MerchantID: "11825715",
         RespondType: "JSON",
-        TimeStamp: payment.created_at.to_i,
+        TimeStamp: @payment.created_at.to_i,
         Version: "1.2",
         LangType: "zh-tw",
-        MerchantOrderNo: "#{payment.id}AC#{Rails.env.upcase[0]}",
-        Amt: payment.booking.fee,
-        ItemDesc: "Booking #{payment.booking.id}",
+        MerchantOrderNo: "#{@payment.id}AC#{Rails.env.upcase[0]}",
+        Amt: @payment.booking.fee,
+        ItemDesc: "Booking #{@payment.booking.id}",
         ReturnURL: "http://localhost:3000/pay2go/return",
         NotifyURL: "http://www.unbusymassage.tech",
-        Email: payment.booking.email,
+        Email: @payment.booking.email,
         LoginType: 0,
         CREDIT: 1,
       }
@@ -27,5 +30,4 @@ module ApplicationHelper
 
       pay2go_params
   end
-
 end

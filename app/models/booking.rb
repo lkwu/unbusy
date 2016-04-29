@@ -13,6 +13,7 @@ class Booking < ActiveRecord::Base
   # end
 # ------------------------------------------------------------------
 
+  has_many :payments
 
   belongs_to :user
 

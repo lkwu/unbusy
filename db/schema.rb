@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 20160428134545) do
     t.text     "remark"
     t.string   "contact_email"
     t.string   "username"
+    t.string   "email"
   end
 
+  add_index "bookings", ["email"], name: "index_bookings_on_email"
   add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
 
   create_table "payments", force: :cascade do |t|

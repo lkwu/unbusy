@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-    
+
     def index
       @bookings = Booking.all
     end
@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
 	def new
       @booking = Booking.new
 	end
-    
+
     def create
       @booking = Booking.new(booking_params)
       if current_user
@@ -18,11 +18,21 @@ class BookingsController < ApplicationController
           redirect_to :back 
         end
       else
-      	  redirect_to new_session_path(:user, :booking_id => @booking)
+        redirect_to new_session_path(:user, :booking_id => @booking)
       end
     end
 
 
+    def checkout_pay2go
+      @booking = current_user.bookings.find( params[:id] )
+
+      if @booking.paid?
+        redirect_to :back, alert: '已經付款'
+      else
+        @payment = Payment.create!( :booking => @booking, :payment_method => params[:payment_method] )
+        render :layout => false
+      end
+    end
     def show
       @booking = Booking.find(params[:id])
       @user = @booking.user
@@ -66,6 +76,7 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark) 
   end
+
 
 
 
