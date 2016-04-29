@@ -4,20 +4,20 @@
   <div class="col-sm-6">
    <h2><%= "按摩人數#{@booking.people}人" %></h2>
    <h2><%= "每人按摩時間#{@booking.service_hour}hr" %></h2>
-   <h2><%= "人數x按摩時間#{@booking.people * @booking.service_hour}hr" %></h2>
+   
    <h2><%= "費用#{}元" %></h2>
   </div>
   <div class="col-sm-6">
-   <h2><%= "公司名稱#{@user.company}" %></h2>
-   <h2><%= "聯絡人#{@user.username}" %></h2>
-   <h2><%= "聯絡電話#{@user.phone}" %></h2>
-   <h2><%= "E-mail#{@user.contact_email}" %></h2>
-   <h2><%= "公司地址#{@user.address}" %></h2>
-   <h2><%= "備註#{@user.remark}" %></h2>
+   <h2><%= "公司名稱#{@booking.company}" %></h2>
+   <h2><%= "聯絡人#{@booking.username}" %></h2>
+   <h2><%= "聯絡電話#{@booking.phone}" %></h2>
+   <h2><%= "E-mail#{@booking.contact_email}" %></h2>
+   <h2><%= "公司地址#{@booking.address}" %></h2>
+   <h2><%= "備註#{@booking.remark}" %></h2>
   </div>
 </div>
 </div>
-<%= link_to "修改公司資料", edit_user_path(params[:user_id], :booking_id => @booking), :class => "btn btn-primary" %>
+<%= link_to "修改公司資料", edit_user_path(@booking.user , :booking_id => @booking), :class => "btn btn-primary" %>
 
 <%= link_to "確認完畢,前往付款", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post, :class => "btn btn-danger" %>
 

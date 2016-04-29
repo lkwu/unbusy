@@ -30,12 +30,13 @@ Rails.application.routes.draw do
     resource :profile
   end
   resources :bookings do
-    get :login
     member do
-
       post :checkout_pay2go
     end
   end
+
+
+
 
 
   # Example of regular route:

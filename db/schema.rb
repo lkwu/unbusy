@@ -18,13 +18,19 @@ ActiveRecord::Schema.define(version: 20160429140214) do
     t.date     "date"
     t.string   "time"
     t.integer  "fee"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.integer  "people"
     t.integer  "service_hour"
-    t.boolean  "paid",         default: false
+    t.boolean  "paid",          default: false
     t.integer  "masseur"
     t.string   "email"
+    t.string   "phone"
+    t.text     "address"
+    t.string   "company"
+    t.text     "remark"
+    t.string   "contact_email"
+    t.string   "username"
   end
 
   add_index "bookings", ["email"], name: "index_bookings_on_email"
@@ -53,12 +59,8 @@ ActiveRecord::Schema.define(version: 20160429140214) do
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
-    t.string   "phone"
-    t.text     "address"
-    t.string   "company"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -73,8 +75,6 @@ ActiveRecord::Schema.define(version: 20160429140214) do
     t.string   "fb_token"
     t.boolean  "admin"
     t.string   "authentication_token"
-    t.string   "remark"
-    t.string   "contact_email"
   end
 
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true

@@ -10,20 +10,18 @@ class BookingsController < ApplicationController
 
     def create
       @booking = Booking.new(booking_params)
-      @booking.user = current_user
-      if @booking.save
-        if current_user
-          redirect_to edit_user_path(current_user, :booking_id => @booking.id)
+      if current_user
+        @booking.user = current_user
+        if @booking.save
+          redirect_to edit_user_path(current_user, :booking_id => @booking)
         else
-      	  redirect_to  booking_login_url(@booking)
+          redirect_to :back 
         end
       else
-        redirect_to :back
+        redirect_to new_session_path(:user, :booking_id => @booking)
       end
     end
 
-    def login
-    end
 
     def checkout_pay2go
       @booking = current_user.bookings.find( params[:id] )
@@ -50,11 +48,23 @@ class BookingsController < ApplicationController
     end
 
     def update
-      @booking = Booking.find(params[:id])
-      if @booking.update(booking_params)
-        redirect_to edit_user_path(@booking.user, :booking_id => @booking.id)
+      if params[:booking_id]
+        if params[:commit] == "修改需求"
+          @booking = Booking.find(params[:booking_id])
+          @booking.update(booking_params)
+          redirect_to edit_booking_path(@booking)
+        elsif params[:commit] == "預約確認"
+          @booking = Booking.find(params[:booking_id])
+          @booking.update(booking_params)
+          redirect_to booking_path(params[:booking_id], :user_id => @user)
+        end  
       else
-        render :back
+        @booking = Booking.find(params[:id])
+        if @booking.update(booking_params)
+          redirect_to edit_user_path(@booking.user, :booking_id => @booking.id)
+        else
+          render :back
+        end
       end
     end
 
@@ -64,7 +74,7 @@ class BookingsController < ApplicationController
 
 
   def booking_params
-    params.require(:booking).permit( :date, :time, :people, :service_hour)
+    params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark) 
   end
 
 
