@@ -8,9 +8,9 @@ class ApiV1::BookingsController < ApiController
                             :people => params[:people],
                             :service_hour => params[:service_hour]
                           )
-    @user = User.find_by_authentication_token(params[:auth_token])
+    @user = User.find_by_authentication_token(params[:auth_token]) #正式上線時把這一行藏起來
 
-    user.update( :username => params[:username],
+    @user.update( :username => params[:username], #正式上線時把@拿掉
                  :company => params[:company],
                  :phone => params[:phone],
                  :contact_email => params[:contact_email],

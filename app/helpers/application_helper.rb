@@ -18,6 +18,7 @@ module ApplicationHelper
       }
 
       raw = pay2go_params.slice(:Amt, :MerchantID, :MerchantOrderNo, :TimeStamp, :Version).sort.map!{|ary| "#{ary.first}=#{ary.last}"}.join('&')
+      hash_config = Rails.application.config_for(:hash)
       hash_key = "xHBWeY01LaVtAX7mqpLq2Ly4AZMoJSqg"
       hash_iv = "z1cO0dPLoKeYIml8"
       str = "HashKey=#{hash_key}&#{raw}&HashIV=#{hash_iv}"
