@@ -1,9 +1,11 @@
-<%= link_to '預約按摩', new_booking_path %>
+
 
 <%= link_to "服務說明", about_path %>
 
-<% if current_user %>
-  <%= link_to "預約查詢", user_profile_path(@user) %>
-<%else%>
-  <%= link_to "預約查詢",  new_session_path(:user) %>
-<%end%>
+<% if user_signed_in? %>
+  <%= link_to "預約查詢", user_path(@user) %>
+<% else %>
+  <%= link_to "預約查詢", user_session_path %>
+<% end %>
+
+<%= link_to '預約按摩', new_booking_path %>
