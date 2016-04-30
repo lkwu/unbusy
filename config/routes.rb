@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   resources :welcome do
   end
 
+  namespace :admin do
+    resources :unbusys
+  end
+
   get '/about' =>'welcome#about'
 
   scope :path => '/api/v1/', :module => "api_v1", :as => 'v1', :defaults => { :format => :json } do
