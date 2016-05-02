@@ -14,7 +14,7 @@ class ApiV1::BookingsController < ApiController
                             :remark => params[:remark],
                             :user_id => @user.id 
                           )
-  
+
     if @booking.save
       render :json => { :id => @booking.id }, :status => 200
     else

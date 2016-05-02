@@ -1,0 +1,10 @@
+<h3> 預約記錄 </h3>
+
+
+<% current_user.bookings.each do |booking| %>
+  <p>使用日期：<%= booking.date %></p>
+  <p>訂單金額：新台幣$ <%= booking.fee %></p>
+<% end %>
+
+<%= link_to "回首頁", welcome_index_path %> |
+<%= link_to "預約服務", new_booking_path %>

@@ -1,0 +1,2 @@
+module Admin::UnbusysHelper
+end
