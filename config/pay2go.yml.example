@@ -1,0 +1,7 @@
+development:
+  hash_key:
+  hash_iv:
+
+production:
+  hash_key:
+  hash_iv:

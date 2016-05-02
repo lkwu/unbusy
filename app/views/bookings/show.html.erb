@@ -13,13 +13,16 @@
    <h2><%= "公司地址#{@booking.address}" %></h2>
    <h2><%= "備註#{@booking.remark}" %></h2>
   </div>
-  
-  <div class="pull-left">
-   <%= link_to "修改公司資料", edit_user_path(@booking.user , :booking_id => @booking), :class => "btn btn-primary" %>
-  </div>
-  <div class="pull-right"> 
-   <%= link_to "確認完畢,前往付款", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post, :class => "btn btn-danger" %>
-  </div>
+  <% if @booking.paid %>
+    <h3>付款已完成<h3>
+  <%else%>
+    <div class="pull-left">
+     <%= link_to "修改公司資料", edit_user_path(@booking.user , :booking_id => @booking), :class => "btn btn-primary" %>
+    </div>
+    <div class="pull-right">
+     <%= link_to "確認完畢,前往付款", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post, :class => "btn btn-danger" %>
+    </div>
+  <%end%>
  </div>
 </div>
 

@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(version: 20160430074356) do
     t.integer  "service_hour"
     t.boolean  "paid",          default: false
     t.integer  "masseur"
+    t.string   "email"
     t.string   "phone"
     t.text     "address"
     t.string   "company"
     t.text     "remark"
     t.string   "contact_email"
     t.string   "username"
-    t.string   "email"
     t.integer  "show_fee"
   end
 
