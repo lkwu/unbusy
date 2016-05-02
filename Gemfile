@@ -38,6 +38,7 @@ gem 'fullcalendar-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'bootstrap-datepicker-rails'
+gem "letter_opener"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

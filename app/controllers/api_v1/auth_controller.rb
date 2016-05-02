@@ -3,13 +3,21 @@ class ApiV1::AuthController < ApiController
 
   def signup
     @user = User.new
+    @users = User.all
     if params[:email] && params[:password]
       @user.email = params[:email]
       @user.password = params[:password]
+
       if @user.save
         render :json => { :message => "ok" }
       else
-        render :json => { :message => "create error" }, :status => 404
+        if @users.find_by_email(params[:email])
+          render :json => { :message => "email已經註冊過囉" }, :status => 404
+        elsif params[:password].length < 8
+          render :json => { :message => "密碼長度錯誤" }, :status => 404
+        else
+          render :json => { :message => "create error" }, :status => 404
+        end
       end
     end
   end

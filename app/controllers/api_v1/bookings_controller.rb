@@ -11,6 +11,7 @@ class ApiV1::BookingsController < ApiController
                             :contact_email => params[:contact_email],
                             :address => params[:address],
                             :masseur => params[:masseur],
+                            :remark => params[:remark],
                             :user_id => @user.id 
                           )
   

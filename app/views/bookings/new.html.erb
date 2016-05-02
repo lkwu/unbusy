@@ -4,7 +4,7 @@
     <div class="date">
       <h2>選擇想要的日期與時段</h2>
       <%= f.text_field :date, :class => "datepicker" %>
-      <div class="datepicker"></div>
+      <div id="darepicker_appear" class="datepicker"></div>
     </div>
     <div class="time">
       <%= f.radio_button :time, '上午', :checked => true %> <span>上午</span>
@@ -15,13 +15,13 @@
     <h2>填寫按摩需求</h2>
     <div class="people">
     <h3>需要按摩師人數</h3> 
-      <%= f.select :masseur, [[ "1人" , 1 ],[ "2人" , 2 ],[ "3人" , 3 ],[ "4人" , 4 ],[ "5人" , 5 ],[ "6人" , 6 ],[ "7人" , 7 ],[ "8人" , 8 ],[ "9人" , 9 ],[ "10人" , 10 ]] %> 
+      <%= f.select :masseur, [[ "1人" , 1 ],[ "2人" , 2 ],[ "3人" , 3 ],[ "4人" , 4 ],[ "5人" , 5 ],[ "6人" , 6 ],[ "7人" , 7 ],[ "8人" , 8 ],[ "9人" , 9 ],[ "10人" , 10 ]], :prompt=> "請選擇" %> 
     </div>
-    
   <p>---------------------------------------------------------------------------------------------------</p>
   <div class="paid">
-  <h2>費用 :</h2>
-  <%= f.text_field :fee, :disabled => true %> 
+   <h2>費用 :</h2>
+   <%= f.text_field :show_fee, :disabled => true %>
+   <%= f.text_field :fee %> 
   </div>
   <p>注意事項</p>
   <p>每次服務至少需預約人數x按摩時間3小時</p>
@@ -38,12 +38,19 @@
 
  
 
-<script>
+// <script>
     $('.datepicker').datepicker({
       // todayHighlight: true,
+      // $( your_datepicker_id ).datepicker( "getDate" )
       format: "yyyy-mm-dd",
     });
 
+
+    // $("#darepicker_appear").change(function(){
+
+    //   var result = $("#darepicker_appear").datepicker( "getDate" );
+    //   $("#booking_fee").val(result);
+    // });
 
 
 
@@ -51,6 +58,8 @@
       var car = Math.ceil($(this).val() / 3) * 300;
       var result = $(this).val() * 2760 + car;
       $("#booking_fee").val(result);
+      $("#booking_show_fee").val(result);
     });
 
 </script>
+

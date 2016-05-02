@@ -1,5 +1,5 @@
 class Booking < ActiveRecord::Base
-  validates_presence_of :date, :time
+  validates_presence_of :date, :time, :masseur
 # ---------------------------------------------------------------
   # validates :morning, presence: true, unless: :afternoon
   # validates :afternoon, presence: true, unless: :morning

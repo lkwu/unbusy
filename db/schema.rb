@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428134545) do
+ActiveRecord::Schema.define(version: 20160430074356) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "user_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160428134545) do
     t.string   "contact_email"
     t.string   "username"
     t.string   "email"
+    t.integer  "show_fee"
   end
 
   add_index "bookings", ["email"], name: "index_bookings_on_email"
