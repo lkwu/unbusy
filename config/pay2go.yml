@@ -1,7 +1,0 @@
-development:
-  hash_key: "xHBWeY01LaVtAX7mqpLq2Ly4AZMoJSqg"
-  hash_iv: "z1cO0dPLoKeYIml8"
-
-production:
-  hash_key: "tdTVHCCVCXFX5JnRaxLQwwxMAVZfbcRF"
-  hash_iv: "qLA8nd30aIXfsl6C"
