@@ -13,7 +13,6 @@ class BookingsController < ApplicationController
     if current_user
       @booking.user = current_user
       if @booking.save
-        UserMailer.notify_comment(@booking, current_user).deliver_now 
         redirect_to edit_user_path(current_user, :booking_id => @booking)
       else
         redirect_to :back 

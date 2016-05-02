@@ -3,9 +3,9 @@
 <%= link_to "服務說明", about_path %>
 
 <% if user_signed_in? %>
-  <%= link_to "預約查詢", user_path(@user) %>
+  <%= link_to "預約查詢", user_path(current_user) %>
 <% else %>
-  <%= link_to "預約查詢", user_session_path %>
+  <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
 <% end %>
 
 <%= link_to '預約按摩', new_booking_path %>
