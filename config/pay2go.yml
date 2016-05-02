@@ -3,5 +3,5 @@ development:
   hash_iv: "z1cO0dPLoKeYIml8"
 
 production:
-  hash_key: "QD14RTgZ7HQHvNij5a3zIS6FYT53thXj"
-  hash_iv: "VYoMSEM0mCHRp0bv"
+  hash_key: "tdTVHCCVCXFX5JnRaxLQwwxMAVZfbcRF"
+  hash_iv: "qLA8nd30aIXfsl6C"
