@@ -11,7 +11,8 @@ class ApiV1::BookingsController < ApiController
                             :contact_email => params[:contact_email],
                             :address => params[:address],
                             :masseur => params[:masseur],
-                            :user_id => @user.id
+                            :remark => params[:remark],
+                            :user_id => @user.id 
                           )
 
     if @booking.save
