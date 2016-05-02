@@ -57,16 +57,12 @@ class BookingsController < ApplicationController
       if params[:commit] == "修改需求"
         redirect_to edit_booking_path(@booking)
       elsif params[:commit] == "預約確認"
-          redirect_to booking_path(params[:booking_id], :user_id => @user)
-<<<<<<< HEAD
-        end
-=======
+        redirect_to booking_path(params[:booking_id], :user_id => @user)
       end
     else
       @booking = Booking.find(params[:id])
       if @booking.update(booking_params)
         redirect_to edit_user_path(@booking.user, :booking_id => @booking.id)
->>>>>>> 3d8d90e8df9e26e0e09819935fb27d4d73efcfb4
       else
         render :back
       end
@@ -79,11 +75,7 @@ class BookingsController < ApplicationController
 
 
   def booking_params
-<<<<<<< HEAD
-    params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark)
-=======
     params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark, :fee, :masseur)
->>>>>>> 3d8d90e8df9e26e0e09819935fb27d4d73efcfb4
   end
 
 
