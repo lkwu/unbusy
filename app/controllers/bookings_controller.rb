@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
         if @booking.save
           redirect_to edit_user_path(current_user, :booking_id => @booking)
         else
-          redirect_to :back 
+          redirect_to :back
         end
       else
         redirect_to new_session_path(:user, :booking_id => @booking)
@@ -57,7 +57,7 @@ class BookingsController < ApplicationController
           @booking = Booking.find(params[:booking_id])
           @booking.update(booking_params)
           redirect_to booking_path(params[:booking_id], :user_id => @user)
-        end  
+        end
       else
         @booking = Booking.find(params[:id])
         if @booking.update(booking_params)
@@ -74,7 +74,7 @@ class BookingsController < ApplicationController
 
 
   def booking_params
-    params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark) 
+    params.require(:booking).permit( :date, :time, :people, :service_hour, :company, :username, :phone, :contact_email, :address, :remark)
   end
 
 
