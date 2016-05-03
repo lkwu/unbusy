@@ -1,3 +1,9 @@
 development:
-  app_id:
-  secret:
+  facebook:
+    app_id:
+    secret:
+
+production:
+  facebook:
+    app_id:
+    secret:
