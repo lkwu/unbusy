@@ -1,7 +1,8 @@
-
-<div class="roll">
+<div id="booking_show">
  <div class="container">
   <div class="col-sm-6">
+   <h2><%= "按摩日期 #{@booking.date}" %></h2>
+   <h2><%= "按摩時間#{@booking.time}" %></h2>
    <h2><%= "需要按摩師人數#{@booking.masseur}人" %></h2>
    <h2><%= "費用#{@booking.fee}元" %></h2>
   </div>
@@ -25,5 +26,4 @@
   <%end%>
  </div>
 </div>
-
 

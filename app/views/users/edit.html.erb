@@ -1,41 +1,41 @@
-
+<div id="booking_user">
 <div class="container">
 <h1>填寫公司資料</h1>
 <%= form_for @booking do |u| %>
- <ul>
+ <ul style='list-style-type:none;'>
   <li>
-   <h3>
-    <%= u.label :company, '公司名稱:' %>
+   <h3 class="company">
+    <%= u.label :company, '公司名稱' %>
     <%= u.text_field :company %>
    </h3>  
   </li>
   <li>
-   <h3>
-    <%= u.label :username, '聯絡人:' %>
+   <h3 class="username">
+    <%= u.label :username, '聯絡人' %>
     <%= u.text_field :username %>
    </h3>
   </li>
   <li>
-   <h3>
-    <%= u.label :phone, '聯絡電話:' %>
+   <h3 class="phone">
+    <%= u.label :phone, '聯絡電話' %>
     <%= u.text_field :phone %> 
    </h3>
   </li>
   <li>
-   <h3>
-    <%= u.label :contact_email, '聯絡E-mail:' %>
+   <h3 class="contact_email">
+    <%= u.label :contact_email, '聯絡E-mail' %>
     <%= u.text_field :contact_email %>
    </h3>
   </li>
   <li>
-   <h3>
-    <%= u.label :address, '公司地址:' %>
+   <h3 class="address">
+    <%= u.label :address, '公司地址' %>
     <%= u.text_field :address %>
    </h3>
   </li>
   <li>
-   <h3>
-    <%= u.label :remark, '備註:' %>
+   <h3 class="remark">
+    <%= u.label :remark, '備註' %>
     <%= u.text_area :remark %>
    </h3>
   </li> 
@@ -43,7 +43,7 @@
   <%= hidden_field_tag :booking_id, params[:booking_id] %>
 
   </ul>
-  <div class="clearfix">
+  <div class="clearfix" id="user_submit">
    <div class="pull-left">
     <%= u.submit '< 修改需求', :class => "btn btn-primary" %> 
    </div>
@@ -53,5 +53,5 @@
   </div>
 <%end%>
 </div>
-
+</div>
 
