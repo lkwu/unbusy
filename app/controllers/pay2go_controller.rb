@@ -19,6 +19,7 @@ class Pay2goController < ApplicationController
     if @payment.paid?
       @booking.paid = true
       @booking.save!
+      UserMailer.notify_comment(@booking, current_user).deliver_now
       # And then Pay2go will send a paid email to user
     end
 

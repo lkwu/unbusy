@@ -4,61 +4,86 @@
     <div class="date">
       <h2>選擇想要的日期與時段</h2>
       <%= f.text_field :date, :class => "datepicker" %>
-      <div class="datepicker"></div>
+      <div id="datepicker"></div>
     </div>
     <div class="time">
       <%= f.radio_button :time, '上午', :checked => true %> <span>上午</span>
       <%= f.radio_button :time, '下午' %> <span>下午</span>
     </div>
   </div>
+
+
+
   <div class="col-sm-6">
+   <div class="demand">
     <h2>填寫按摩需求</h2>
+   </div> 
     <div class="people">
     <h3>需要按摩師人數</h3> 
       <%= f.select :masseur, [[ "1人" , 1 ],[ "2人" , 2 ],[ "3人" , 3 ],[ "4人" , 4 ],[ "5人" , 5 ],[ "6人" , 6 ],[ "7人" , 7 ],[ "8人" , 8 ],[ "9人" , 9 ],[ "10人" , 10 ]], :prompt=> "請選擇" %> 
     </div>
-    
   <p>---------------------------------------------------------------------------------------------------</p>
-  <div class="paid">
-  <h2>費用 :</h2>
-   <%= f.text_field :show_fee, :disabled => true %>
-   <%= f.text_field :fee %>
+  <div class="paid_masseur">
+   <h2>按摩師費用</h2>
+   <input type="text" class="masseur" disabled = "true" >
+  </div> 
+  <div class="paid_car">
+   <h2>交通費</h2>
+   <input type="text" class="car" disabled = "true" >
   </div>
-  <p>注意事項</p>
-  <p>每次服務至少需預約人數x按摩時間3小時</p>
-  <p>每小時收費900</p>
+  <div class="paid_all">
+   <h2>總費用</h2>
+   <%= f.text_field :show_fee, :disabled => true %>
+   <%= f.text_field :fee %> 
+  </div>
+  <p>建議：</p>
+  <p>按摩人數為1~6人時建議選取1位按摩師</p>
+  <p>按摩人數為7~12人時建議選取2位按摩師</p> 
+  <p>按摩人數為13~21人時建議選取3位按摩師</p>
+  
 
 
 
-
-  <%= f.submit '送出' %>
+   <div class="pull-right">
+    <%= f.submit '填寫公司資料 >', :class => "btn btn-primary" %>
+   </div>
   </div>
  </div>
 <%end%>
+<div id="page_output"></div>
 
-
-
+ 
 
 <script>
-    $('.datepicker').datepicker({
-      // todayHighlight: true,
+$(document).ready(function(){
+
+    $('#datepicker').datepicker({
       format: "yyyy-mm-dd",
+      startDate: "+7d",
+    });
+
+    $('#datepicker').on('changeDate',function(){
+      var date = $('#datepicker').datepicker('getFormattedDate');
+      $('#booking_date').val(date);
     });
 
 
-    // $(".active day").change(function(){
-    //   console.log( $(this).val() );
-    //   // var result = $(this).val();
-    //   // $("#booking_date").val(result);
-    // });
+    $('#booking_date').datepicker({
+      format: "yyyy-mm-dd",
+      startDate: "+7d",
+    });
 
 
 
     $("#booking_masseur").change(function(){
       var car = Math.ceil($(this).val() / 3) * 300;
-      var result = $(this).val() * 2760 + car;
+      $(".car").val(car);
+      var masseur = $(this).val() * 2760;
+      $(".masseur").val(masseur);
+      var result = masseur + car;
       $("#booking_fee").val(result);
       $("#booking_show_fee").val(result);
     });
-
+});
 </script>
+

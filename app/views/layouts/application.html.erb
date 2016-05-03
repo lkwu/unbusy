@@ -9,16 +9,19 @@
 
 <body>
 
-  <% if user_signed_in? %>
-    <%= link_to "登出", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "登入", new_session_path(:user) %>
-    <%= link_to "註冊", new_registration_path(:user) %> |
-    <%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %>
-  <% end %>
+ <div id="header" class="clearfix"> 
+  <div class="pull-right" id="service">
+    <%= link_to "服務說明", about_path %>
+    <%= link_to "各方評價" %>
+    <% if user_signed_in? %>
+      <%= link_to "預約查詢", user_path(current_user) %>
+    <% else %>
+      <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
+    <% end %>
+    <%= link_to '預約按摩', new_booking_path, :class =>"active" %>
+  </div>
+ </div>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
 <%= yield %>
 

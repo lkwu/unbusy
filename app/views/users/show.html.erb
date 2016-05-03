@@ -2,8 +2,10 @@
 
 
 <% current_user.bookings.each do |booking| %>
-  <p>使用日期：<%= booking.date %></p>
-  <p>訂單金額：新台幣$ <%= booking.fee %></p>
+  <% if booking.paid %>  
+    <p>使用日期：<%= booking.date %></p>
+    <p>訂單金額：新台幣$ <%= booking.fee %></p>
+  <%end%>
 <% end %>
 
 <%= link_to "回首頁", welcome_index_path %> |

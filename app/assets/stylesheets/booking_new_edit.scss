@@ -1,0 +1,53 @@
+#booking_fee{
+  display: none;
+}
+
+
+#booking_date{
+  display: none;
+}
+
+table.table-condensed{
+  width: 535px;
+  height: 450px;
+  border-width: 2px;
+}
+ 
+.date{
+  text-align: center;
+} 
+
+#datepicker{
+  border: 2px solid #979797;
+}
+
+.demand{
+  text-align: center;
+}
+	
+.people{
+  h3{
+    display: inline;
+  }
+}
+
+.paid_masseur{
+  margin: 25px 0 ;
+  h2{
+    display: inline;
+  }	
+}
+
+.paid_car{
+  margin: 25px 60px ;
+  h2{
+    display: inline;
+  }	
+}
+
+.paid_all{
+  margin: 25px 60px ;
+  h2{
+    display: inline;
+  }	
+}

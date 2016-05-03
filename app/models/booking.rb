@@ -1,5 +1,5 @@
 class Booking < ActiveRecord::Base
-  validates_presence_of :date, :time, :masseur
+  validates_presence_of :date, :time, :masseur, :fee
 # ---------------------------------------------------------------
   # validates :morning, presence: true, unless: :afternoon
   # validates :afternoon, presence: true, unless: :morning
@@ -17,15 +17,6 @@ class Booking < ActiveRecord::Base
 
   belongs_to :user
 
-
-
-
-
-
-
-
-
-
   # def self.remaining_of_masseur_morning( date )
   #     masseur=Booking.where( date: date.to_date, morning: true).sum(:masseur)
   #     return 10 - masseur
@@ -35,9 +26,15 @@ class Booking < ActiveRecord::Base
   #     masseur=Booking.where( date: date.to_date, afternoon: true).sum(:masseur)
   #     return 10 - masseur
   # end
+  
 
-
-
+  def self.the_before_booking_day
+    Booking.all.each do |b|
+      if (b.date - Time.now.to_date).to_i == 1
+        UserMailer.notify_comment(@booking, current_user).deliver_now
+      end  
+    end
+  end
 
 
 

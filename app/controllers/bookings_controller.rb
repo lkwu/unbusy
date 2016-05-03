@@ -13,12 +13,12 @@ class BookingsController < ApplicationController
     if current_user
       @booking.user = current_user
       if @booking.save
-        UserMailer.notify_comment(@booking, current_user).deliver_now
         redirect_to edit_user_path(current_user, :booking_id => @booking)
       else
         redirect_to :back
       end
     else
+      @booking.save
       redirect_to new_session_path(:user, :booking_id => @booking)
     end
   end
@@ -53,11 +53,12 @@ class BookingsController < ApplicationController
   def update
     if params[:booking_id]
       @booking = Booking.find(params[:booking_id])
+      @booking.user = current_user
       @booking.update(booking_params)
-      if params[:commit] == "修改需求"
+      if params[:commit] == "< 修改需求"
         redirect_to edit_booking_path(@booking)
-      elsif params[:commit] == "預約確認"
-        redirect_to booking_path(params[:booking_id], :user_id => @user)
+      elsif params[:commit] == "預約確認 >"
+          redirect_to booking_path(params[:booking_id], :user_id => @booking.user)
       end
     else
       @booking = Booking.find(params[:id])

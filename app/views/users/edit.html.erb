@@ -1,36 +1,57 @@
-<h2>填寫公司資料</h2>
+
+<div class="container">
+<h1>填寫公司資料</h1>
 <%= form_for @booking do |u| %>
  <ul>
   <li>
-   <%= u.label :company, '公司名稱' %>
-   <%= u.text_field :company %>
+   <h3>
+    <%= u.label :company, '公司名稱:' %>
+    <%= u.text_field :company %>
+   </h3>  
   </li>
   <li>
-   <%= u.label :username, '聯絡人' %>
-   <%= u.text_field :username %>
+   <h3>
+    <%= u.label :username, '聯絡人:' %>
+    <%= u.text_field :username %>
+   </h3>
   </li>
   <li>
-   <%= u.label :phone, '聯絡電話' %>
-   <%= u.text_field :phone %> 
+   <h3>
+    <%= u.label :phone, '聯絡電話:' %>
+    <%= u.text_field :phone %> 
+   </h3>
   </li>
   <li>
-   <%= u.label :contact_email, '聯絡E-mail' %>
-   <%= u.text_field :contact_email %>
+   <h3>
+    <%= u.label :contact_email, '聯絡E-mail:' %>
+    <%= u.text_field :contact_email %>
+   </h3>
   </li>
   <li>
-   <%= u.label :address, '公司地址' %>
-   <%= u.text_field :address %>
+   <h3>
+    <%= u.label :address, '公司地址:' %>
+    <%= u.text_field :address %>
+   </h3>
   </li>
   <li>
-   <%= u.label :remark, '備註' %>
-   <%= u.text_area :remark %>
+   <h3>
+    <%= u.label :remark, '備註:' %>
+    <%= u.text_area :remark %>
+   </h3>
   </li> 
 
   <%= hidden_field_tag :booking_id, params[:booking_id] %>
 
   </ul>
-  <%= u.submit '修改需求' %> 
-  <%= u.submit '預約確認' %> 
+  <div class="clearfix">
+   <div class="pull-left">
+    <%= u.submit '< 修改需求', :class => "btn btn-primary" %> 
+   </div>
+   <div class="pull-right">
+    <%= u.submit '預約確認 >', :class => "btn btn-primary" %> 
+   </div>
+  </div>
 <%end%>
+</div>
 
 
