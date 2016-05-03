@@ -23,3 +23,8 @@
 every 1.day, :at => '10:20 pm' do
   runner "Booking.the_before_booking_day"
 end
+
+
+
+
+
