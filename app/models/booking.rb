@@ -31,11 +31,14 @@ class Booking < ActiveRecord::Base
   def self.the_before_booking_day
     Booking.all.each do |b|
       if (b.date - Time.now.to_date).to_i == 1
-        UserMailer.notify_comment(@booking, current_user).deliver_now
+        puts(b.id)
+        # UserMailer.notify_comment(b, b.user)
       end  
     end
   end
 
+  scope :expired, -> { where(paid: true).where(["date <= ?", Time.now.to_date ]) }
+  scope :waiting, -> { where(paid: true).where(["date > ?", Time.now.to_date ] ) }
 
 
 end

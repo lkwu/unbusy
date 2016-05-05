@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     resources :bookings
 
     post "/checkout_pay2go" => "payment_method#Credit"
+    get '/about' => 'welcome#about'
 
   end
 

@@ -41,6 +41,7 @@ gem 'bootstrap-datepicker-rails'
 gem "letter_opener"
 gem 'sidekiq'
 gem 'whenever', :require => false
+gem 'rest-client'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

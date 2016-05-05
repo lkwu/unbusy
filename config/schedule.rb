@@ -20,6 +20,11 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every 1.day, :at => '10:20 pm' do
+every 1.minute do
   runner "Booking.the_before_booking_day"
 end
+
+
+
+
+
