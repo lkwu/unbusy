@@ -14,7 +14,7 @@ class Pay2go
         Amt: @payment.booking.fee,
         ItemDesc: "Booking #{@payment.booking.id}",
         ReturnURL: "http://localhost:3000/pay2go/return",
-        NotifyURL: "http://www.unbusymassage.tech",
+        NotifyURL: "http://requestb.in/1igs4w01",
         Email: @payment.booking.email,
         LoginType: 0,
         CREDIT: 1,
