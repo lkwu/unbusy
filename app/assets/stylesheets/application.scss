@@ -10,15 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+
  *= require bootstrap-datepicker3
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "booking_new_edit";
-@import "fullcalendar";
-//@import "fullcalendar.print";
 @import "body";
 @import "user_edit";
-@import "booking_show"
+@import "booking_show";
+@import "welcome";

@@ -1,13 +1,52 @@
 #header{
-  background-color: #F2F2F2;
+  position: absolute;
+  top:0;
+  z-index: 3;
 }
+
+ul {
+  float: right;
+  width: 500px;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 900px;
+}
+
+li {
+  float: left;
+  list-style-type: none;
+}
+
+a {
+  padding-left: 28px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size:16px;
+  color:#3b2a1f;
+}
+
+.header_booking {
+  display: inline-block; /*按鈕要有高度跟寬度*/
+  margin-top: -10px;
+  margin-left: 28px;
+  padding: 8px 25px;
+  background: #f26565;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none; /*拿掉超連結的底線*/
+  text-align: center;
+}
+
 #service{
-  padding: 30px 60px ;  
+  padding: 30px 60px ;
   font-size: 15px;
 }
 
 #footer{
   background-color: #635146;
-  padding: 20px 60px ; 
+  width: 100vw;
+  height: 50px;
+  padding: 20px 60px ;
 }
 
