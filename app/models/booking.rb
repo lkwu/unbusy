@@ -31,8 +31,10 @@ class Booking < ActiveRecord::Base
   def self.the_before_booking_day
     Booking.all.each do |b|
       if (b.date - Time.now.to_date).to_i == 1
-        puts(b.id)
-        # UserMailer.notify_comment(b, b.user)
+        # puts(b.id)
+      # User.create!(email: "howclf@gmail.com", password: "123456123")
+
+        UserMailer.notify_comment(b, b.user)
       end  
     end
   end
