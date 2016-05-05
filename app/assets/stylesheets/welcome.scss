@@ -20,7 +20,7 @@ h3 {
 /* index-top */
 
 #index-top {
-  background-image: url(header背景圖.png);
+  background-image: image-url("header-background.png");
   background-size: cover;
   margin:0px;
   padding:0px;
@@ -103,7 +103,7 @@ a {
 /* specialty */
 
 #specialty {
-  background-image: url(specialty-layer);
+  background-image: image-url("specialty-layer");
   background-size: cover;
   width: 100vw;
   height: 757px;
@@ -187,7 +187,7 @@ a {
 /* story */
 
 #story {
-  background-image: url(story-layer);
+  background-image: image-url("story-layer");
   background-size: cover;
   width: 100vw;
   height: 600px;
