@@ -27,6 +27,7 @@ body {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
+  position: relative;
 }
 
 #booking .container {
@@ -185,12 +186,17 @@ table.table-condensed {
   width: 300px;
 }
 
+.hidden_in_page {
+  display: none;
+}
+
 
 /* Next step */
 
 .pull-right {
-  margin-top: -20%;
-  margin-right: -52%;
+  position: absolute;
+  top: 220%;
+  left: 53%;
 }
 
 .forward-check {
