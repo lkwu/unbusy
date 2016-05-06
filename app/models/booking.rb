@@ -34,7 +34,7 @@ class Booking < ActiveRecord::Base
         # puts(b.id)
       # User.create!(email: "howclf@gmail.com", password: "123456123")
 
-        UserMailer.notify_comment(b, b.user)
+        UserMailer.notify_comment(b, b.user).deliver_later!
       end  
     end
   end

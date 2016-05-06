@@ -5,6 +5,9 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.notify_comment.subject
   #
+  default :from => "l9726226@gmail.com"
+
+
   def notify_comment(booking, user)
     @booking = booking
     @user = user
