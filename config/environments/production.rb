@@ -80,4 +80,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {  host: "http://homepage.unbusymassage.tech/" }
   # config.action_mailer.delivery_method = :letter_opener #:smtp
   config.action_mailer.smtp_settings = config_for(:email).symbolize_keys
+  
 end
