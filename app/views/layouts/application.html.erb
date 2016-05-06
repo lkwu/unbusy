@@ -9,6 +9,37 @@
 
 <body>
 
+<div id="top-header">
+  <div class="container">
+
+    <div id="home-logo">
+      <%= image_tag("top-header.png", :alt => "HOME LOGO")%>
+    </div>
+
+    <div id="nav clearfix">
+      <ul>
+        <li>
+          <%= link_to "服務說明", about_path %>
+        </li>
+        <li>
+          <%= link_to "各方評價" %>
+        </li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to "預約查詢", user_path(current_user) %>
+          <% else %>
+            <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
 <!-- <div id="header">
   <div class="container clearfix">
     <div id="nav clearfix">

@@ -28,11 +28,12 @@ body {
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   position: relative;
+  z-index: 0;
 }
 
 #booking .container {
   width: 67.22%;
-  margin-left: 19%;
+  margin-left: 10.53%;
 }
 
 #booking .demand p {
@@ -41,13 +42,23 @@ body {
   font-family:PingFangTC-Medium;
   font-size:28px;
   color:#635146;
-  text-align:center;
+/*  text-align:center;
   margin-top: 39px;
-  margin-bottom: 70px;
+  margin-bottom: 70px;*/
   float: left;
-  margin-left: 35%;
+  position: absolute;
+  z-index: 1;
+  top: 3.9%;
+  left: 44.32%;
 }
 
+
+.choice {
+  position: absolute;
+  z-index: 1;
+  top: 14.83%;
+  left: 8%;
+}
 
 /* col-sm-6 left-side */
 
@@ -195,8 +206,8 @@ table.table-condensed {
 
 .pull-right {
   position: absolute;
-  top: 220%;
-  left: 53%;
+  top: 74%;
+  left: 52.4%;
 }
 
 .forward-check {

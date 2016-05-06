@@ -1,35 +1,3 @@
-<div id="top-header">
-  <div class="container">
-
-    <div id="home-logo">
-      <%= image_tag("top-header.png", :alt => "HOME LOGO")%>
-    </div>
-
-    <div id="nav clearfix">
-      <ul>
-        <li>
-          <%= link_to "服務說明", about_path %>
-        </li>
-        <li>
-          <%= link_to "各方評價" %>
-        </li>
-        <li>
-          <% if user_signed_in? %>
-            <%= link_to "預約查詢", user_path(current_user) %>
-          <% else %>
-            <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-
 <div id="flow-chart">
   <div class="container">
     <%= image_tag("flowchart-need.png", :class => "flow-chart") %>
@@ -37,73 +5,74 @@
 </div>
 
 <div id="booking">
-  <%=form_for @booking do |f| %>
+  <div class="container">
+    <%=form_for @booking do |f| %>
 
-    <div class="demand">
-      <div class="container clearfix">
-        <p>填寫需求</p>
-      </div>
-    </div>
-
-    <div class="choice">
-      <div class="container">
-
-        <div class="col-sm-6">
-          <div class="date">
-            <h4>選擇日期與時段</h4>
-            <%= f.text_field :date, :class => "datepicker" %>
-            <div id="datepicker"></div>
-          </div>
-          <div class="time">
-            <%= f.radio_button :time, '上午', :checked => true %> <span>上午 9:00 ～ 12:00</span> </br>
-            <%= f.radio_button :time, '下午' %> <span>下午 2:00 ～ 5:00</span>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="review"></div>
-            <h4>填寫需求</h4>
-            <div class="people">
-              <p>按摩師人數</p>
-              <%= f.select :masseur, [[ "1人" , 1 ],[ "2人" , 2 ],[ "3人" , 3 ],[ "4人" , 4 ],[ "5人" , 5 ],[ "6人" , 6 ],[ "7人" , 7 ],[ "8人" , 8 ],[ "9人" , 9 ],[ "10人" , 10 ]], :prompt=> "請選擇" %>
-            </div>
-
-            <div class="paid_masseur">
-              <p>按摩費用</p>
-              <input type="text" class="masseur" disabled = "true" > 元
-            </div>
-
-            <div class="paid_car">
-              <p>交通費</p>
-              <input type="text" class="car" disabled = "true" > 元
-            </div>
-
-            <hr />
-
-            <div class="booking_fee">
-              <p>總金額</p>
-              <%= f.text_field :show_fee, :disabled => true %> 元
-              <%= f.text_field :fee, :class => "hidden_in_page" %>
-            </div>
-
-            <div class="suggestion">
-              <h4>按摩建議：</h4>
-                <p>按摩人數為1~6人時建議選取1位按摩師</p>
-                <p>按摩人數為7~12人時建議選取2位按摩師</p>
-                <p>按摩人數為13~21人時建議選取3位按摩師</p>
-            </div>
-          </div>
+      <div class="demand">
+        <div class="container clearfix">
+          <p>填寫需求</p>
         </div>
       </div>
-    </div>
 
-    <div class="pull-right">
-      <%= f.submit '下一步', :class => "forward-check" %>
-    </div>
+      <div class="choice">
+        <div class="container">
 
-  <% end %>
+          <div class="col-sm-6">
+            <div class="date">
+              <h4>選擇日期與時段</h4>
+              <%= f.text_field :date, :class => "datepicker" %>
+              <div id="datepicker"></div>
+            </div>
+            <div class="time">
+              <%= f.radio_button :time, '上午', :checked => true %> <span>上午 9:00 ～ 12:00</span> </br>
+              <%= f.radio_button :time, '下午' %> <span>下午 2:00 ～ 5:00</span>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-sm-push-2">
+            <div class="review"></div>
+              <h4>填寫需求</h4>
+              <div class="people">
+                <p>按摩師人數</p>
+                <%= f.select :masseur, [[ "1人" , 1 ],[ "2人" , 2 ],[ "3人" , 3 ],[ "4人" , 4 ],[ "5人" , 5 ],[ "6人" , 6 ],[ "7人" , 7 ],[ "8人" , 8 ],[ "9人" , 9 ],[ "10人" , 10 ]], :prompt=> "請選擇" %>
+              </div>
+
+              <div class="paid_masseur">
+                <p>按摩費用</p>
+                <input type="text" class="masseur" disabled = "true" > 元
+              </div>
+
+              <div class="paid_car">
+                <p>交通費</p>
+                <input type="text" class="car" disabled = "true" > 元
+              </div>
+
+              <hr />
+
+              <div class="booking_fee">
+                <p>總金額</p>
+                <%= f.text_field :show_fee, :disabled => true %> 元
+                <%= f.text_field :fee, :class => "hidden_in_page" %>
+              </div>
+
+              <div class="suggestion">
+                <h4>按摩建議：</h4>
+                  <p>按摩人數為1~6人時建議選取1位按摩師</p>
+                  <p>按摩人數為7~12人時建議選取2位按摩師</p>
+                  <p>按摩人數為13~21人時建議選取3位按摩師</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pull-right">
+        <%= f.submit '下一步', :class => "forward-check" %>
+      </div>
+
+    <% end %>
+  </div>
 </div>
-
 
 
 <script>
