@@ -1,59 +1,205 @@
-#booking{
-  height: 555px ;
+/* Body */
+
+body {
+  background-color: #fafafa;
 }
 
-#booking_fee{
+
+/* flow chart */
+
+#flow-chart img {
+  width: 47%;
+  height: auto;
+  margin-left: 25%;
+  margin-top: 60px;
+}
+
+
+/* booking box */
+
+#booking {
+  margin: 0;
+  margin-top: 71px;
+  margin-bottom: 99px;
+  margin-left: 12%;
+  width: 968px;
+  height: 800px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+#booking .container {
+  width: 67.22%;
+  margin-left: 19%;
+}
+
+#booking .demand p {
+  width: 112px;
+  height: 40px;
+  font-family:PingFangTC-Medium;
+  font-size:28px;
+  color:#635146;
+  text-align:center;
+  margin-top: 39px;
+  margin-bottom: 70px;
+  float: left;
+  margin-left: 35%;
+}
+
+
+/* col-sm-6 left-side */
+
+.col-sm-6 h4 {
+  font-family:PingFangTC-Medium;
+  font-size:20px;
+  color:#f99595;
+  text-align:left;
+}
+
+.date > h4 {
+  margin-left: -37%;
+}
+
+#datepicker {
+  border: 1px solid #979797;
+  width: 365px;
+  height: 313px;
+  margin-left: -40%;
+  background:#ffffff;
+}
+
+#booking_date {
   display: none;
 }
 
-
-#booking_date{
-  display: none;
-}
-
-table.table-condensed{
-  width: 535px;
-  height: 450px;
+table.table-condensed {
+  width: 365px;
+  height: 313px;
   border-width: 2px;
 }
 
+.col-sm-6 > .time {
+  margin-top: 20px;
+}
 
- 
-.date{
+.col-sm-6 span {
+  font-family:PingFangTC-Regular;
+  font-size:16px;
+  color:#444444;
+  letter-spacing:0px;
+  line-height:30px;
+  text-align:left;
+}
+
+
+/* col-sm-6 right-side */
+
+.people {
+  display: inline;
+}
+
+.people p {
+  font-family:PingFangTC-Regular;
+  font-size:16px;
+  color:#635146;
+  line-height:24px;
+  text-align:left;
+  float: left;
+}
+
+.people select {
+  margin-left: 13px;
+}
+
+.paid_masseur {
+  margin-top: 28px;
+}
+
+.paid_masseur p {
+  font-family:PingFangTC-Regular;
+  font-size:16px;
+  color:#635146;
+  line-height:24px;
+  text-align:left;
+  float: left;
+}
+
+.paid_masseur input {
+  margin-left: 34px;
+  border: 0;
+  width: 50px;
+}
+
+.paid_car {
+  margin-top: 28px;
+}
+
+.paid_car p {
+  font-family:PingFangTC-Regular;
+  font-size:16px;
+  color:#635146;
+  line-height:24px;
+  text-align:left;
+  float: left;
+}
+
+.paid_car input {
+  margin-left: 50px;
+  border: 0;
+  width: 50px;
+}
+
+.booking_fee p {
+  font-family:PingFangTC-Regular;
+  font-size:16px;
+  color:#635146;
+  line-height:24px;
+  text-align:left;
+  float: left;
+}
+
+.booking_fee input {
+  margin-left: 50px;
+  border: 0;
+  width: 50px;
+}
+
+
+/* Suggestion */
+
+.suggestion h4 {
+  font-family: PingFangTC-Medium;
+  font-size: 20px;
+  color: #f99595;
+  text-align: left;
+  margin-top: 46px;
+}
+
+.suggestion p {
+  font-family: PingFangTC-Regular;
+  font-size: 16px;
+  color: #635146;
+  line-height: 24px;
+  text-align: left;
+  width: 300px;
+}
+
+
+/* Next step */
+
+.pull-right {
+  margin-top: -20%;
+  margin-right: -52%;
+}
+
+.forward-check {
+  color: #ffffff;
+  background: #f26565;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 11px 62px;
+  border-style: none;
+  font-size: 20px;
   text-align: center;
-} 
-
-#datepicker{
-  border: 2px solid #979797;
-}
-
-.demand{
-  text-align: center;
-}
-	
-.people{
-  h3{
-    display: inline;
-  }
-}
-
-.paid_masseur{
-  margin: 25px 0 ;
-  h2{
-    display: inline;
-  }	
-}
-
-.paid_car{
-  margin: 25px 60px ;
-  h2{
-    display: inline;
-  }	
-}
-
-.paid_all{
-  margin: 25px 60px ;
-  h2{
-    display: inline;
-  }	
 }

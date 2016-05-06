@@ -1,7 +1,52 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  display: block;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+}
+
+h2 {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+}
+
+h3 {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+  font-size: 24px;
+  color: #f26565;
+  line-height: 36px;
+}
+
+p {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+}
+
+
 #header{
   position: absolute;
   top:0;
   z-index: 3;
+}
+
+#top-header {
+  height: 72px;
+  box-shadow: 0px 1px 2px #DBDBDB;
+}
+
+#home-logo {
+  width: 207px;
+  height: auto;
+  float: left;
+  margin-top: 15px;
+  margin-left: 9.44%;
 }
 
 ul {
@@ -9,7 +54,7 @@ ul {
   width: 500px;
   margin: 0;
   margin-top: 30px;
-  margin-left: 900px;
+  margin-right: 11.25%;
 }
 
 li {
