@@ -25,6 +25,14 @@ every 1.minute do
 end
 
 
+# env :PATH, ENV['PATH'] #要用bundle時必須要加
+
+# set :output, 'log/cron.log' #設定log的路徑
+
+# every 1.minute do
+#     rake "dev:jobs"
+# end
+
 
 
 

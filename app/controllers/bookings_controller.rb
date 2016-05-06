@@ -58,7 +58,9 @@ class BookingsController < ApplicationController
       if params[:commit] == "< 修改需求"
         redirect_to edit_booking_path(@booking)
       elsif params[:commit] == "預約確認 >"
-          redirect_to booking_path(params[:booking_id], :user_id => @booking.user)
+        UserMailer.notify_comment(@booking, current_user).deliver_later
+
+        redirect_to booking_path(params[:booking_id], :user_id => @booking.user)
       end
     else
       @booking = Booking.find(params[:id])
