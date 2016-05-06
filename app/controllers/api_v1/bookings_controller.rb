@@ -16,7 +16,8 @@ class ApiV1::BookingsController < ApiController
                             :paid => true,
                           )
     if @booking.save
-      render :json => { :id => @booking.id }, :status => 200
+      render :json => { :id => @booking.id,
+                        :message => "預約成功" }, :status => 200
     else
       render :json => { :message => "預約失敗", :errors => @booking.errors }, :status => 400
     end
