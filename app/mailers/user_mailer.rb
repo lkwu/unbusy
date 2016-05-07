@@ -12,6 +12,6 @@ class UserMailer < ApplicationMailer
     @booking = booking
     @user = user
 
-    mail to: user.email, :subject =>  "new post wanna check?"
+    mail to: @user.email, :subject =>  "new post wanna check?"
   end
 end
