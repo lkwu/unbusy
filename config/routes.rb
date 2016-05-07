@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :welcome do
   end
 
+  get '/evaluate' =>'welcome#evaluate'
+
   namespace :admin do
     resources :unbusys
   end
