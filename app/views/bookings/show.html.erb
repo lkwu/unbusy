@@ -1,29 +1,49 @@
+<div id="flow-chart">
+  <div class="container">
+    <%= image_tag("flowchart-info.png", :class => "flow-chart") %>
+  </div>
+</div>
+
+
 <div id="booking_show">
- <div class="container">
-  <div class="col-sm-6">
-   <h2><%= "按摩日期 #{@booking.date}" %></h2>
-   <h2><%= "按摩時間#{@booking.time}" %></h2>
-   <h2><%= "需要按摩師人數#{@booking.masseur}人" %></h2>
-   <h2><%= "費用#{@booking.fee}元" %></h2>
-  </div>
-  <div class="col-sm-6">
-   <h2><%= "公司名稱#{@booking.company}" %></h2>
-   <h2><%= "聯絡人#{@booking.username}" %></h2>
-   <h2><%= "聯絡電話#{@booking.phone}" %></h2>
-   <h2><%= "E-mail#{@booking.contact_email}" %></h2>
-   <h2><%= "公司地址#{@booking.address}" %></h2>
-   <h2><%= "備註#{@booking.remark}" %></h2>
-  </div>
-  <% if @booking.paid %>
-    <h3>付款已完成<h3>
-  <%else%>
-    <div class="pull-left">
-     <%= link_to "修改公司資料", edit_user_path(@booking.user , :booking_id => @booking), :class => "btn btn-primary" %>
+  <div class="container">
+
+    <p class="subtitle">確認預約</p>
+
+    <div class="col-sm-6">
+      <p>按摩需求</p>
+
+      <p><%= "按摩日期#{@booking.date}" %></p>
+      <p><%= "按摩時間#{@booking.time}" %></p>
+      <p><%= "按摩師人數#{@booking.masseur}人" %></p>
+      <p><%= "費用#{@booking.fee}元" %></p>
+      <hr />
+      <p><%= "總費用"%></p>
     </div>
-    <div class="pull-right">
-     <%= link_to "確認完畢,前往付款", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post, :class => "btn btn-danger" %>
+
+    <div class="col-sm-6">
+      <p>公司資料</p>
+
+      <p><%= "公司名稱#{@booking.company}" %></p>
+      <p><%= "聯絡人#{@booking.username}" %></p>
+      <p><%= "聯絡電話#{@booking.phone}" %></p>
+      <p><%= "E-mail#{@booking.contact_email}" %></p>
+      <p><%= "公司地址#{@booking.address}" %></p>
+      <hr />
+      <p><%= "備註#{@booking.remark}" %></p>
     </div>
-  <%end%>
- </div>
+
+    <% if @booking.paid %>
+      <h3>付款已完成<h3>
+    <%else%>
+      <div class="go-back">
+       <%= link_to "上一步", edit_user_path(@booking.user , :booking_id => @booking) %>
+      </div>
+      <div class="go-forward">
+       <%= link_to "確認付款", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post %>
+      </div>
+    <%end%>
+
+  </div>
 </div>
 
