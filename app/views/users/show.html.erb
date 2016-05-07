@@ -1,12 +1,75 @@
-<h3> 預約記錄 </h3>
+<div id="booking_record">
+  <div class="container">
+
+    <p class="booking_record"> 預約記錄 </p>
+
+    <div class="success_record">
+      <p>預約成功記錄</p>
+
+      <table class="success">
+        <thead>
+          <td class="tb-number">預約編號</td>
+          <td class="tb-time">預約時間</td>
+          <td class="tb-masseur">按摩師人數</td>
+          <td class="tb-fee">總費用</td>
+          <td class="tb-remark">備註</td>
+        </thead>
+
+        <% current_user.bookings.each do |booking| %>
+          <% if booking.paid && Date.current < booking.date %>
+
+        <tbody>
+
+            <td class="tb-number"><%= "14ACD" %></td>
+            <td class="tb-time"><%= booking.date %> <%= booking.time %></td>
+            <td class="tb-masseur"><%= booking.masseur %></td>
+            <td class="tb-fee"><%= booking.fee %></td>
+            <td class="tb-remark"><%= booking.remark %></td>
+
+        </tbody>
+      </table>
+
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="service_done">
+      <p>服務完成記錄</p>
+
+      <table class="service_done">
+        <thead>
+          <td>預約編號</td>
+          <td>預約時間</td>
+          <td>按摩師人數</td>
+          <td>總費用</td>
+          <td>備註</td>
+        </thead>
+
+      <% current_user.bookings.each do |booking| %>
+        <% if booking.paid  && Date.current > booking.date && Time.current > booking.time%>
+
+        <tbody>
+          <tr>
+            <td><%= "14ACD" %></td>
+            <td><%= booking.date %> <%= booking.time %></td>
+            <td><%= booking.masseur %></td>
+            <td><%= booking.fee %></td>
+            <td><%= booking.remark %></td>
+          </tr>
+        </tbody>
+      </table>
+
+        <% end %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
 
 
-<% current_user.bookings.each do |booking| %>
-  <% if booking.paid %>  
-    <p>使用日期：<%= booking.date %></p>
-    <p>訂單金額：新台幣$ <%= booking.fee %></p>
-  <%end%>
-<% end %>
 
-<%= link_to "回首頁", welcome_index_path %> |
-<%= link_to "預約服務", new_booking_path %>
+
+
+
+
+
