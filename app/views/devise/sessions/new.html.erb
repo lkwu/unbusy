@@ -1,33 +1,46 @@
-<h1>請先登入會員</h1>
-<div class="roll">
- <div class="container">
-  <div class="col-sm-6">
-   <%= link_to "Facebook", user_omniauth_authorize_path(:facebook, :booling_id => params[:id]), :class => 'btn btn-primary' %>
-  </div>
-  <div class="col-sm-6">
-   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-   </div>
+<div id="log-in-unbusy">
+  <div class="container">
 
-   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-   </div>
+    <h1>登入</h1>
+    <p>請選擇用 Facebook 或 E-mail 登入</p>
 
-   <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="roll">
+
+      <div class="col-sm-6">
+        <div class="fblogin">
+          <%= link_to "用Facebook帳號登入", user_omniauth_authorize_path(:facebook, :booling_id => params[:id]) %>
+        </div>
+      </div>
+
+
+      <div class="col-sm-6">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="field">
+          <div class="field-email">
+            <%= f.label :email, "E-mail" %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field-password">
+            <%= f.label :password, "密碼" %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "登入" %>
+        </div>
+
+        <% end %>
+      </div>
+
     </div>
-   <% end -%>
 
-   <div class="actions">
-    <%= f.submit "Log in" %>
-   </div>
-  <% end %>
+    <span>
+      <%= link_to "沒有 Facebook 且不是會員嗎？", new_registration_path(:user) %>
+    </span>
   </div>
- </div>
 </div>
-<%= link_to "註冊", new_registration_path(:user) %> 
+
+
