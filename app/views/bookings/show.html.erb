@@ -1,76 +1,101 @@
-<div id="flow-chart">
-  <div class="container">
-    <%= image_tag("flowchart-confirmation.png", :class => "flow-chart") %>
+<% if @booking.paid %>
+
+  <div id="flow-chart">
+    <div class="container">
+      <%= image_tag("flowchart-done.png", :class => "flow-chart") %>
+    </div>
   </div>
-</div>
+
+  <div id="booking_done">
+    <div class="container">
+
+      <h2>完成預約</h2>
+
+      <p>恭喜您已經順利完成預約！</br>
+         我們會寄通知與相關訊息到您的信箱</br>
+         iam@unbusymassage.tech</br>
+         再請您收信確認囉！</br>
+
+         您也可以隨時到<%= link_to "預約查詢", user_path(current_user) %>查看您的預約記錄喔！
+      </p>
+
+      <div class="order-log">
+        <%= link_to "查詢本次預約", user_path(current_user) %>
+      </div>
+
+    </div>
+  </div>
+
+<% else %>
+
+  <div id="flow-chart">
+    <div class="container">
+      <%= image_tag("flowchart-confirmation.png", :class => "flow-chart") %>
+    </div>
+  </div>
 
 
-<div id="booking_show">
-  <div class="container">
+  <div id="booking_show">
+    <div class="container">
 
-    <h2 class="subtitle">確認預約</h2>
+      <h2 class="subtitle">確認預約</h2>
 
-    <div class="col-sm-6 first">
-      <h3>按摩需求</h3>
+      <div class="col-sm-6 first">
+        <h3>按摩需求</h3>
+          <table>
+          <tr>
+            <td class="item">按摩日期</td>
+            <td><%= "#{@booking.date}" %></td>
+          </tr>
+          <tr>
+            <td class="item">按摩時間</td>
+            <td><%= "#{@booking.time}" %></td>
+          </tr>
+          <tr>
+            <td class="item">按摩師人數</td>
+            <td><%= "#{@booking.masseur}人" %></td>
+          </tr>
+          <tr>
+            <td class="item">費用</td>
+            <td><%= "#{@booking.fee}元" %></td>
+          </tr>
+          <tr>
+            <td class="item-total">總費用</td>
+            <td class="td-totalprice"><%= "#{@booking.fee}元"%></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="col-sm-6">
+        <h3>公司資料</h3>
         <table>
-        <tr>
-          <td class="item">按摩日期</td>
-          <td><%= "#{@booking.date}" %></td>
-        </tr>
-        <tr>
-          <td class="item">按摩時間</td>
-          <td><%= "#{@booking.time}" %></td>
-        </tr>
-        <tr>
-          <td class="item">按摩師人數</td>
-          <td><%= "#{@booking.masseur}人" %></td>
-        </tr>
-        <tr>
-          <td class="item">費用</td>
-          <td><%= "#{@booking.fee}元" %></td>
-        </tr>
-        <tr>
-          <td class="item-total">總費用</td>
-          <td class="td-totalprice"><%= "#{@booking.fee}元"%></td>
-        </tr>
-      </table>
+          <tr>
+            <td class="item">公司名稱</td>
+            <td><%= "#{@booking.company}" %></td>
+          </tr>
+          <tr>
+            <td class="item">聯絡人</td>
+            <td><%= "#{@booking.username}" %></td>
+          </tr>
+          <tr>
+            <td class="item">聯絡電話</td>
+            <td><%= "#{@booking.phone}" %></td>
+          </tr>
+          <tr>
+            <td class="item">E-mail</td>
+            <td><%= "#{@booking.contact_email}" %></td>
+          </tr>
+          <tr>
+            <td class="item">公司地址</td>
+            <td><%= "#{@booking.address}" %></td>
+          </tr>
+          <tr>
+            <td class="item-total">備註</td>
+            <td class="td-last"><%= "#{@booking.remark}" %></td>
+          </tr>
+        </table>
+      </div>
 
-    </div>
-
-    <div class="col-sm-6">
-      <h3>公司資料</h3>
-      <table>
-        <tr>
-          <td class="item">公司名稱</td>
-          <td><%= "#{@booking.company}" %></td>
-        </tr>
-        <tr>
-          <td class="item">聯絡人</td>
-          <td><%= "#{@booking.username}" %></td>
-        </tr>
-        <tr>
-          <td class="item">聯絡電話</td>
-          <td><%= "#{@booking.phone}" %></td>
-        </tr>
-        <tr>
-          <td class="item">E-mail</td>
-          <td><%= "#{@booking.contact_email}" %></td>
-        </tr>
-        <tr>
-          <td class="item">公司地址</td>
-          <td><%= "#{@booking.address}" %></td>
-        </tr>
-        <tr>
-          <td class="item-total">備註</td>
-          <td class="td-last"><%= "#{@booking.remark}" %></td>
-        </tr>
-      </table>
-
-    </div>
-
-<!--     <% if @booking.paid %>
-      <h3>付款已完成<h3>
-    <% else %> -->
       <div class="go-back">
        <%= link_to "上一步", edit_user_path(@booking.user , :booking_id => @booking) %>
       </div>
@@ -78,8 +103,9 @@
       <div class="go-forward">
        <%= link_to "確認付款", checkout_pay2go_booking_path(@booking, :payment_method => "Credit"), :method => :post %>
       </div>
-<!--     <%end%> -->
 
+    </div>
   </div>
-</div>
+
+<% end %>
 
