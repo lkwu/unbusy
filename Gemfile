@@ -16,7 +16,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
 
-gem 'rest-client'
 gem 'omniauth-facebook'
 gem "mysql2", '~> 0.3.18', :group => :production
 
@@ -42,6 +41,7 @@ gem "letter_opener"
 gem 'sidekiq'
 gem 'whenever', :require => false
 gem 'rest-client'
+gem 'capistrano-sidekiq'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
