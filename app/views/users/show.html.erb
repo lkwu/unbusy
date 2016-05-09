@@ -46,7 +46,7 @@
         </thead>
 
       <% current_user.bookings.each do |booking| %>
-        <% if booking.paid  && Date.current > booking.date && Time.current > booking.time%>
+        <% if booking.paid  && Date.current > booking.date && Time.current > booking.time %>
 
         <tbody>
           <tr>
