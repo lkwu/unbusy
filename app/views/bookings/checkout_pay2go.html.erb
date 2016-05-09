@@ -1,6 +1,6 @@
 <p> 前往付款頁面，請勿關閉或重整頁面 </p>
 
-<form action = "https://capi.pay2go.com/MPG/mpg_gateway", method="post">
+<form action = "https://api.pay2go.com/MPG/mpg_gateway", method="post">
   <% generate_pay2go_params(@payment).each do |key, value| %>
   <%= hidden_field_tag key, value %>
 <% end %>
