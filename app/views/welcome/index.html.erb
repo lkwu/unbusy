@@ -9,14 +9,33 @@
   <div id="index-top">
     <div class="container clearfix">
 
-<!--       <div id="nav clearfix">
+      <div id="nav clearfix">
         <ul>
-          <li><a href="http://homepage.unbusymassage.tech/about">服務說明</a></li>
-          <li><a href="#">各方評價</a></li>
-          <li><a href="#">預約查詢</a></li>
-          <li><a class="header_booking" href="http://homepage.unbusymassage.tech/bookings/new">預約按摩</a></li>
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to "登出", destroy_user_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to "登入", user_session_path %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "服務說明", about_path %>
+          </li>
+          <li>
+            <%= link_to "各方評價", evaluate_path %>
+          </li>
+          <li>
+            <% if user_signed_in? %>
+              <%= link_to "預約查詢", user_path(current_user) %>
+            <% else %>
+              <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
+          </li>
         </ul>
-      </div> -->
+      </div>
 
       <div id="logo">
         <%= image_tag ("Logo.png") %>
@@ -100,9 +119,7 @@
     <div class="container">
 
     <div class="slogan">
-      <h2>我想要一句可以給CEO或員工喚起他們動作的slogan</br>
-          或是可以把我們的故事簡單的放在這裡
-      </h2>
+      <h2>Best service for best employee.</h2>
     </div>
 
     <a href="http://homepage.unbusymassage.tech/bookings/new" class="button">立即預約</a>

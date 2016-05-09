@@ -9,9 +9,7 @@
     <%=form_for @booking do |f| %>
 
       <div class="demand">
-        <div class="container clearfix">
-          <p>填寫需求</p>
-        </div>
+        <p>填寫需求</p>
       </div>
 
       <div class="choice">
@@ -51,6 +49,7 @@
 
               <div class="booking_fee">
                 <p>總金額</p>
+
                 <%= f.text_field :show_fee, :disabled => true %> 元
                 <%= f.text_field :fee  %>
               </div>
@@ -61,13 +60,13 @@
                   <p>按摩人數為7~12人時建議選取2位按摩師</p>
                   <p>按摩人數為13~21人時建議選取3位按摩師</p>
               </div>
+
+              <div class="pull-right">
+                <%= f.submit '下一步' %>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="pull-right">
-        <%= f.submit '下一步', :class => "forward-check" %>
       </div>
 
     <% end %>

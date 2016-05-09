@@ -39,6 +39,8 @@ p {
 #top-header {
   height: 72px;
   box-shadow: 0px 1px 2px #DBDBDB;
+/*  position: absolute;
+  z-index: -1;*/
 }
 
 #home-logo {
@@ -71,7 +73,7 @@ a {
   color:#3b2a1f;
 }
 
-.header_booking {
+a.header_booking {
   display: inline-block; /*按鈕要有高度跟寬度*/
   margin-top: -10px;
   margin-left: 28px;
@@ -93,5 +95,7 @@ a {
   width: 100vw;
   height: 50px;
   padding: 20px 60px ;
+/*  position: absolute;
+  z-index: -1;*/
 }
 
