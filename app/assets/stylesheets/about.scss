@@ -4,7 +4,7 @@
   margin-bottom: 99px;
   margin-left: 30.14%;
   width: 568px;
-  height: 452px;
+  height: 600px;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
@@ -13,8 +13,15 @@
 #about-page .container {
   width: 100%;
   height: 100%;
-  padding-right: 0;
-  padding-left: 0;
+  padding: 15px;
   position: relative;
   z-index: 0;
+}
+
+#about-page p {
+  font-family: PingFangTC;
+  font-size: 14px;
+  color: #635146;
+  line-height: 24px;
+  text-align: left;
 }
