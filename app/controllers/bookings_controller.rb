@@ -58,6 +58,7 @@ class BookingsController < ApplicationController
       if params[:commit] == "上一步"
         redirect_to edit_booking_path(@booking)
       elsif params[:commit] == "下一步"
+        UserMailer.notify_comment(@booking, current_user).deliver_later
 
         redirect_to booking_path(params[:booking_id], :user_id => @booking.user)
       end
