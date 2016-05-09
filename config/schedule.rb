@@ -20,10 +20,14 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every 1.minute do
+every 1.day do
   runner "Booking.the_before_booking_day"
+  runner "Booking.the_delete_no_paid"
 end
 
+every 1.minute do
+  runner "Booking.the_delete_no_paid"
+end
 
 # env :PATH, ENV['PATH'] #要用bundle時必須要加
 
