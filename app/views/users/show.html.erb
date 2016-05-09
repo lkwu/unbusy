@@ -16,8 +16,7 @@
         </thead>
 
         <tbody>
-          <% current_user.bookings.each do |booking| %>
-            <% if booking.paid && Date.current < booking.date %>
+          <% current_user.bookings.waiting.each do |booking| %>
 
           <tr>
             <td class="order-number"><%= "#14ACD" %></td>
@@ -27,7 +26,6 @@
             <td><%= booking.remark %></td>
           </tr>
 
-            <% end %>
           <% end %>
         </tbody>
       </table>
@@ -46,8 +44,7 @@
         </thead>
 
         <tbody>
-          <% current_user.bookings.each do |booking| %>
-            <% if booking.paid && Date.current > booking.date && Time.now > booking.time %>
+          <% current_user.bookings.expired.each do |booking| %>
 
           <tr>
             <td class="order-number"><%= "#14ACD" %></td>
@@ -57,7 +54,6 @@
             <td><%= booking.remark %></td>
           </tr>
 
-            <% end %>
           <% end %>
         </tbody>
       </table>
