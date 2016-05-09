@@ -1,7 +1,7 @@
-.whatalphasay .container {
-  width: 77%;
+#evaluation .container {
+  width: 85%;
   height: 100%;
-  margin-bottom: 90px;
+  margin: 0 auto;
 }
 
 #evaluation h2 {
@@ -9,18 +9,18 @@
   font-size:28px;
   color:#635146;
   text-align:center;
-  margin-top: 80px;
+  margin-top: 10px;
   margin-bottom: 70px;
 }
 
-.whatalphasay h3 {
+.customerssay h3 {
   font-family:PingFangTC;
   font-size:20px;
   color:#f99595;
   text-align:left;
 }
 
-.whatalphasay p {
+.customerssay p {
   font-family:PingFangTC;
   font-size:18px;
   color:#030303;
@@ -30,7 +30,7 @@
   margin-bottom: 30px;
 }
 
-.whatalphasay a {
+.customerssay a {
   font-family:PingFangTC;
   font-size:17px;
   color:#f26565;
