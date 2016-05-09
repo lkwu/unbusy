@@ -197,10 +197,6 @@ table.table-condensed {
   width: 300px;
 }
 
-.hidden_in_page {
-  display: none;
-}
-
 
 /* Next step */
 
@@ -210,7 +206,7 @@ table.table-condensed {
   left: 52.4%;
 }
 
-.forward-check {
+#booking .pull-right input {
   color: #ffffff;
   background: #f26565;
   display: inline-block;
