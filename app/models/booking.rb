@@ -39,6 +39,10 @@ class Booking < ActiveRecord::Base
     end
   end
 
+  def self.the_delete_no_paid
+    Booking.where(paid: false).delete_all
+  end
+
   scope :expired, -> { where(paid: true).where(["date <= ?", Time.now.to_date ]) }
   scope :waiting, -> { where(paid: true).where(["date > ?", Time.now.to_date ] ) }
 
