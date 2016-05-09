@@ -22,7 +22,6 @@
 
 every 1.day do
   runner "Booking.the_before_booking_day"
-  runner "Booking.the_delete_no_paid"
 end
 
 every 1.minute do
