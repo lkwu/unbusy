@@ -1,4 +1,4 @@
- ---
- :queues:
-   - default
-   - mailers
+---
+:queues:
+  - default
+  - mailers
