@@ -1,42 +1,12 @@
 <div id="booking_record">
   <div class="container">
 
-    <p class="booking_record"> 預約記錄 </p>
+    <h2> 預約記錄 </h2>
 
-    <div class="success_record">
-      <p>預約成功記錄</p>
+    <div class="success-record">
+      <h3>預約成功記錄</h3>
 
-      <table class="success">
-        <thead>
-          <td class="tb-number">預約編號</td>
-          <td class="tb-time">預約時間</td>
-          <td class="tb-masseur">按摩師人數</td>
-          <td class="tb-fee">總費用</td>
-          <td class="tb-remark">備註</td>
-        </thead>
-
-        <% current_user.bookings.each do |booking| %>
-          <% if booking.paid && Date.current < booking.date %>
-
-        <tbody>
-
-            <td class="tb-number"><%= "14ACD" %></td>
-            <td class="tb-time"><%= booking.date %> <%= booking.time %></td>
-            <td class="tb-masseur"><%= booking.masseur %></td>
-            <td class="tb-fee"><%= booking.fee %></td>
-            <td class="tb-remark"><%= booking.remark %></td>
-
-        </tbody>
-      </table>
-
-        <% end %>
-      <% end %>
-    </div>
-
-    <div class="service_done">
-      <p>服務完成記錄</p>
-
-      <table class="service_done">
+      <table class="table table-hover">
         <thead>
           <td>預約編號</td>
           <td>預約時間</td>
@@ -45,22 +15,52 @@
           <td>備註</td>
         </thead>
 
-      <% current_user.bookings.each do |booking| %>
-        <% if booking.paid  && Date.current > booking.date && Time.current > booking.time%>
-
         <tbody>
+          <% current_user.bookings.each do |booking| %>
+            <% if booking.paid && Date.current < booking.date %>
+
           <tr>
-            <td><%= "14ACD" %></td>
+            <td class="order-number"><%= "#14ACD" %></td>
             <td><%= booking.date %> <%= booking.time %></td>
-            <td><%= booking.masseur %></td>
-            <td><%= booking.fee %></td>
+            <td class="order-masseur"><%= booking.masseur %></td>
+            <td class="order-fee"><%= booking.fee %> 元</td>
             <td><%= booking.remark %></td>
           </tr>
+
+            <% end %>
+          <% end %>
         </tbody>
       </table>
+    </div>
 
-        <% end %>
-      <% end %>
+    <div class="serviced-record">
+      <h3>服務完成記錄</h3>
+
+      <table class="table table-hover">
+        <thead>
+          <td>預約編號</td>
+          <td>預約時間</td>
+          <td>按摩師人數</td>
+          <td>總費用</td>
+          <td>備註</td>
+        </thead>
+
+        <tbody>
+          <% current_user.bookings.each do |booking| %>
+            <% if booking.paid && Date.current > booking.date && Time.now > booking.time %>
+
+          <tr>
+            <td class="order-number"><%= "#14ACD" %></td>
+            <td><%= booking.date %> <%= booking.time %></td>
+            <td class="order-masseur"><%= booking.masseur %></td>
+            <td class="order-fee"><%= booking.fee %> 元</td>
+            <td><%= booking.remark %></td>
+          </tr>
+
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
     </div>
 
   </div>
