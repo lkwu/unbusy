@@ -20,8 +20,8 @@ class Pay2goController < ApplicationController
       @booking.paid = true
       @booking.save!
 
-      # UserMailer.notify_comment(@booking, current_user).deliver_later
-      # # And then Pay2go will send a paid email to user
+      UserMailer.notify_comment(@booking, current_user).deliver_later
+      # And then Pay2go will send a paid email to user
     end
 
     redirect_to booking_path(@booking)
