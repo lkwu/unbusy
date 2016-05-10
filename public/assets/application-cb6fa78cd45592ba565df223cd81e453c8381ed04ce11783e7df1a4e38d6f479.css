@@ -9500,10 +9500,11 @@ body {
   height: auto;
   margin-left: 25%;
   margin-top: 60px;
+  margin-bottom: 70px;
 }
 
 /* booking box */
-/* line 20, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 21, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 #booking {
   margin: 0 auto;
   width: 968px;
@@ -9515,13 +9516,13 @@ body {
   z-index: 0;
 }
 
-/* line 34, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 32, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 #booking .container {
   width: 67.22%;
   margin-left: 10.53%;
 }
 
-/* line 39, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 37, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 #booking .demand p {
   width: 112px;
   height: 40px;
@@ -9538,7 +9539,7 @@ body {
   left: 44.32%;
 }
 
-/* line 56, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 54, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .choice {
   position: absolute;
   z-index: 1;
@@ -9547,7 +9548,7 @@ body {
 }
 
 /* col-sm-6 left-side */
-/* line 65, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 63, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .col-sm-6 h4 {
   font-family: PingFangTC-Medium;
   font-size: 20px;
@@ -9555,12 +9556,12 @@ body {
   text-align: left;
 }
 
-/* line 72, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 70, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .date > h4 {
   margin-left: -37%;
 }
 
-/* line 76, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 74, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 #datepicker {
   border: 1px solid #979797;
   width: 365px;
@@ -9569,24 +9570,24 @@ body {
   background: #ffffff;
 }
 
-/* line 84, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 82, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 #booking_date {
   display: none;
 }
 
-/* line 88, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 86, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 table.table-condensed {
   width: 365px;
   height: 313px;
   border-width: 2px;
 }
 
-/* line 94, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 92, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .col-sm-6 > .time {
   margin-top: 20px;
 }
 
-/* line 98, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 96, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .col-sm-6 span {
   font-family: PingFangTC-Regular;
   font-size: 16px;
@@ -9597,12 +9598,12 @@ table.table-condensed {
 }
 
 /* col-sm-6 right-side */
-/* line 110, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 108, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .people {
   display: inline;
 }
 
-/* line 114, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 112, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .people p {
   font-family: PingFangTC-Regular;
   font-size: 16px;
@@ -9612,17 +9613,17 @@ table.table-condensed {
   float: left;
 }
 
-/* line 123, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 121, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .people select {
   margin-left: 13px;
 }
 
-/* line 127, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 125, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .paid_masseur {
   margin-top: 28px;
 }
 
-/* line 131, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 129, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .paid_masseur p {
   font-family: PingFangTC-Regular;
   font-size: 16px;
@@ -9632,19 +9633,19 @@ table.table-condensed {
   float: left;
 }
 
-/* line 140, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 138, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .paid_masseur input {
   margin-left: 34px;
   border: 0;
   width: 50px;
 }
 
-/* line 146, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 144, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .paid_car {
   margin-top: 28px;
 }
 
-/* line 150, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 148, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .paid_car p {
   font-family: PingFangTC-Regular;
   font-size: 16px;
@@ -9654,14 +9655,14 @@ table.table-condensed {
   float: left;
 }
 
-/* line 159, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 157, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .paid_car input {
   margin-left: 50px;
   border: 0;
   width: 50px;
 }
 
-/* line 165, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 163, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .booking_fee p {
   font-family: PingFangTC-Regular;
   font-size: 16px;
@@ -9671,7 +9672,7 @@ table.table-condensed {
   float: left;
 }
 
-/* line 174, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 172, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .booking_fee input {
   margin-left: 50px;
   border: 0;
@@ -9679,7 +9680,7 @@ table.table-condensed {
 }
 
 /* Suggestion */
-/* line 183, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 181, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .suggestion h4 {
   font-family: PingFangTC-Medium;
   font-size: 20px;
@@ -9688,7 +9689,7 @@ table.table-condensed {
   margin-top: 46px;
 }
 
-/* line 191, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* line 189, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 .suggestion p {
   font-family: PingFangTC-Regular;
   font-size: 16px;
@@ -9698,18 +9699,20 @@ table.table-condensed {
   width: 300px;
 }
 
-/*.hidden_in_page {
+/* line 198, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+#booking_fee {
   display: none;
-}*/
-/* Next step */
-/* line 207, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
-.pull-right {
-  position: absolute;
-  top: 74%;
-  left: 52.4%;
 }
 
-/* line 213, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+/* Next step */
+/* line 205, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
+.pull-right {
+  position: absolute;
+  top: 117%;
+  left: 6.6%;
+}
+
+/* line 211, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_new_edit.scss */
 #booking .pull-right input {
   color: #ffffff;
   background: #f26565;
@@ -9769,9 +9772,11 @@ p {
 #top-header {
   height: 72px;
   box-shadow: 0px 1px 2px #DBDBDB;
+  /*  position: absolute;
+    z-index: -1;*/
 }
 
-/* line 44, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+/* line 46, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
 #home-logo {
   width: 207px;
   height: auto;
@@ -9780,7 +9785,7 @@ p {
   margin-left: 9.44%;
 }
 
-/* line 52, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+/* line 54, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
 ul {
   float: right;
   width: 550px;
@@ -9789,13 +9794,13 @@ ul {
   margin-right: 9%;
 }
 
-/* line 60, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+/* line 62, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
 li {
   float: left;
   list-style-type: none;
 }
 
-/* line 65, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+/* line 67, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
 a {
   padding-left: 28px;
   text-decoration: none;
@@ -9805,8 +9810,8 @@ a {
   color: #3b2a1f;
 }
 
-/* line 74, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
-.header_booking {
+/* line 76, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+a.header_booking {
   display: inline-block;
   /*按鈕要有高度跟寬度*/
   margin-top: -10px;
@@ -9820,18 +9825,21 @@ a {
   text-align: center;
 }
 
-/* line 86, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+/* line 88, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
 #service {
   padding: 30px 60px;
   font-size: 15px;
 }
 
-/* line 91, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
+/* line 93, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/body.scss */
 #footer {
   background-color: #635146;
   width: 100vw;
   height: 50px;
   padding: 20px 60px;
+  margin-top: 99px;
+  /*  position: absolute;
+    z-index: -1;*/
 }
 
 /* line 1, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/user_edit.scss */
@@ -10059,12 +10067,13 @@ a {
   text-align: center;
   font-size: 20px;
   line-height: 20px;
+  text-decoration: none;
   position: absolute;
   bottom: 8.9%;
   left: 29.55%;
 }
 
-/* line 113, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_show.scss */
+/* line 114, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/booking_show.scss */
 #booking_show .go-forward a {
   display: inline-block;
   padding: 11px 28px;
@@ -10076,6 +10085,7 @@ a {
   text-align: center;
   font-size: 20px;
   line-height: 20px;
+  text-decoration: none;
   position: absolute;
   bottom: 8.9%;
   left: 51%;
@@ -10145,7 +10155,7 @@ a {
 }
 
 /* line 62, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
-.booking {
+a.booking {
   background: #f26565;
   border-radius: 6px;
   padding: 15px 52px;
@@ -10153,10 +10163,11 @@ a {
   text-align: center;
   font-size: 20px;
   color: #ffffff;
+  text-decoration: none;
 }
 
-/* line 72, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
-.download {
+/* line 73, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+a.download {
   background: #383229;
   border-radius: 6px;
   padding: 15px 28px 15px 39px;
@@ -10165,10 +10176,11 @@ a {
   text-align: center;
   font-size: 20px;
   color: #ffffff;
+  text-decoration: none;
 }
 
 /* specialty */
-/* line 86, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 88, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #specialty {
   background-image: url(/assets/specialty-layer-7a5a02e1c02ed9f9e2333c91c8492c3b3ff5c9179cf4a232a118df64f4acf3c2.png);
   background-size: cover;
@@ -10177,7 +10189,7 @@ a {
   position: relative;
 }
 
-/* line 94, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 96, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #specialty h2 {
   margin-top: 0;
   padding-top: 70px;
@@ -10186,7 +10198,7 @@ a {
   text-align: center;
 }
 
-/* line 102, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 104, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .image {
   float: left;
   width: 37.85%;
@@ -10194,14 +10206,14 @@ a {
   margin-left: 220px;
 }
 
-/* line 109, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 111, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #introduction {
   position: absolute;
   top: 27.74%;
   left: 57.85%;
 }
 
-/* line 115, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 117, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #introduction p {
   width: 457px;
   font-size: 20px;
@@ -10210,14 +10222,15 @@ a {
 }
 
 /* flow */
-/* line 125, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 127, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #flow {
   width: 100vw;
   height: 645px;
   position: relative;
+  background-color: #ffffff;
 }
 
-/* line 131, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 134, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #flow h2 {
   margin-top: 0;
   padding-top: 76px;
@@ -10226,29 +10239,29 @@ a {
   text-align: center;
 }
 
-/* line 139, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 142, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .box .container {
   padding-top: 63px;
 }
 
-/* line 143, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 146, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .category img {
   width: 68%;
   height: auto;
   margin-left: 42px;
 }
 
-/* line 149, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 152, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .category h3 {
   text-align: center;
 }
 
-/* line 153, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 156, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .title-info {
   margin-top: 47px;
 }
 
-/* line 157, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 160, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .content {
   font-family: STHeitiTC-Light;
   font-size: 20px;
@@ -10260,7 +10273,7 @@ a {
 }
 
 /* story */
-/* line 170, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 173, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #story {
   background-image: url(/assets/story-layer-63e5ade78da76a5f1301e8bf98bed9506a41bc78acb811aab83b4ba45367da36.png);
   background-size: cover;
@@ -10269,22 +10282,25 @@ a {
   position: relative;
 }
 
-/* line 178, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 181, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 .slogan > h2 {
+  font-family: SourceHanSansTC-Normal;
   font-size: 31.14px;
   color: #a08373;
   letter-spacing: 1.6px;
   text-align: center;
   position: absolute;
-  top: 238px;
-  left: 325px;
+  top: 40%;
+  left: 31%;
 }
 
-/* line 188, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 192, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #story a {
   display: inline-block;
   /*按鈕要有高度跟寬度*/
   padding: 15px 52px;
+  width: 184px;
+  height: 50px;
   background: #f26565;
   color: #ffffff;
   border-radius: 6px;
@@ -10293,12 +10309,12 @@ a {
   text-align: center;
   font-size: 20px;
   position: absolute;
-  top: 336px;
-  left: 628px;
+  top: 56%;
+  left: 43%;
 }
 
 /* footer */
-/* line 204, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 210, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #footer {
   width: 100vw;
   height: 50px;
@@ -10306,7 +10322,7 @@ a {
   padding: 20px 60px;
 }
 
-/* line 211, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 217, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #footer p {
   color: #fff6ed;
   font-size: 13px;
@@ -10315,7 +10331,7 @@ a {
   padding-left: 149px;
 }
 
-/* line 219, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
+/* line 225, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/welcome.scss */
 #copyright {
   font-size: 13px;
   color: #fff6ed;
@@ -10830,4 +10846,35 @@ a {
   letter-spacing: -0.41px;
   text-align: center;
   padding: 0;
+}
+
+/* line 1, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/about.scss */
+#about-page {
+  margin: 0;
+  margin-top: 71px;
+  margin-bottom: 99px;
+  margin-left: 30.14%;
+  width: 568px;
+  height: 600px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+/* line 13, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/about.scss */
+#about-page .container {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  position: relative;
+  z-index: 0;
+}
+
+/* line 21, /Users/lun-kaiwu/finalproject/unbusy/app/assets/stylesheets/about.scss */
+#about-page p {
+  font-family: PingFangTC;
+  font-size: 14px;
+  color: #635146;
+  line-height: 24px;
+  text-align: left;
 }
