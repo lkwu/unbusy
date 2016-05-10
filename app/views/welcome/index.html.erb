@@ -1,128 +1,175 @@
-<!-- <!doctype html>
-<html lang = "en">
-<head>
-  <meta charset="utf-8">
-  <title>不忙按摩</title>
-</head>
-<body> -->
+<div id="index-top">
+  <div class="container">
 
-  <div id="index-top">
-    <div class="container clearfix">
-
-      <div id="nav clearfix">
-        <ul>
-          <li>
-            <% if user_signed_in? %>
-              <%= link_to "登出", destroy_user_session_path, :method => :delete %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "服務說明", about_path %>
-          </li>
-          <li>
-            <%= link_to "各方評價", evaluate_path %>
-          </li>
-          <li>
-            <% if user_signed_in? %>
-              <%= link_to "預約查詢", user_path(current_user) %>
-            <% else %>
-              <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
-          </li>
-        </ul>
+    <div id="nav">
+      <div class="container fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul>
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to "登出", destroy_user_session_path, :method => :delete %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "服務說明", about_path %>
+              </li>
+              <li>
+                <%= link_to "各方評價", evaluate_path %>
+              </li>
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to "預約查詢", user_path(current_user) %>
+                <% else %>
+                  <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <div id="logo">
-        <%= image_tag ("Logo.png") %>
-      </div>
-
-      <div id="vision">
-        <p>線上預約專業的視障按摩服務，</br>
-            讓您的專業團隊享有一流企業的美好福利
-        </p>
-      </div>
-
-      <div id="service">
-        <a class="booking" href="http://homepage.unbusymassage.tech/bookings/new" class="button">立即預約</a>
-        <a class="download" href="#" class="button">下載預約App</a>
-      </div>
-
     </div>
-  </div>
 
-  <div id="specialty">
-    <div class="container">
+    <div class="content">
+      <div class="container fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="logo">
+              <%= image_tag("Logo.png") %>
+            </div>
 
-      <h2>我們的特色</h2>
+            <div class="vision">
+              <p>線上預約專業的視障按摩服務，</br>
+                 讓您的專業團隊享有一流企業的美好福利
+              </p>
+            </div>
 
-      <%= image_tag("specialty-structure.png", :alt => "不忙按摩", :class => "image")%>
-
-      <div id="introduction">
-        <h3>良好的按摩體驗</h3>
-        <p>政府認證的專業按摩師，用最有效率的方式幫您抒壓保健、提神醒腦，讓團隊活力滿點。</p>
-
-        <h3>簡單的預約流程</h3>
-        <p>用點腦、手機都可以完成預約，線上付款、確認預約，替您省去繁雜的聯絡程序，迅速搞定。</p>
-
-        <h3>完善的服務內容</h3>
-        <p>到您的公司為您服務，您只需要準備場地，器材、人員接送等其他事務，交給我們搞定。</p>
+            <div class="service">
+              <a class="booking" href="http://homepage.unbusymassage.tech/bookings/new" class="button">立即預約</a>
+              <a class="download" href="#" class="button">下載預約App</a>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
+
   </div>
+</div>
 
-  <div id="flow">
-    <div class="container">
-      <h2>服務流程</h2>
 
-<!--       <div class="box">
-        <div class="container"> -->
+<div id="specialty">
+  <div class="container">
 
-          <div class="category">
+    <div class="title">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>我們的特色</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <div class="col-sm-6">
+              <%= image_tag("specialty-structure.png", :alt => "不忙按摩", :class => "image")%>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="introduction">
+                <h3>良好的按摩體驗</h3>
+                <p>政府認證的專業按摩師，用最有效率的方式幫您抒壓保健、提神醒腦，讓團隊活力滿點。</p>
+
+                <h3>簡單的預約流程</h3>
+                <p>用電腦、手機都可以完成預約，線上付款、確認預約，替您省去繁雜的聯絡程序，迅速搞定。</p>
+
+                <h3>完善的服務內容</h3>
+                <p>到您的公司為您服務，您只需要準備場地，器材、人員接送等其他事務，交給我們搞定。</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div id="flow">
+  <div class="container">
+
+    <div class="title">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>服務流程</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+
             <div class="col-md-3">
               <%= image_tag("服務流程行事曆圖.png", :alt => "不忙按摩")%>
-              <h3 class="title-info">1. 決定時間與人數</h3>
-              <p class="content">挑選想要的時段和按摩師人數，系統會自動報價供您參考</p>
+              <h3>1. 決定時間與人數</h3>
+              <p>挑選想要的時段和按摩師人數，系統會自動報價供您參考</p>
             </div>
 
             <div class="col-md-3">
               <%= image_tag("服務流程鉛筆圖.png", :alt => "不忙按摩")%>
-              <h3 class="title-info">2. 填寫資料</h3>
-              <p class="content">填寫公司與聯絡資料，讓專業的按摩團隊能在之後順利前往您的鷹巢！</p>
+              <h3>2. 填寫資料</h3>
+              <p>填寫公司與聯絡資料，讓專業的按摩團隊能在之後順利前往您的鷹巢！</p>
             </div>
 
             <div class="col-md-3">
               <%= image_tag("服務流程信用卡圖.png", :alt => "不忙按摩")%>
-              <h3 class="title-info">3. 付款，完成預約</h3>
-              <p class="content">送出預約需求後進行付款，即可完成預約。</p>
+              <h3>3. 付款，完成預約</h3>
+              <p>送出預約需求後進行付款，即可完成預約。</p>
             </div>
 
             <div class="col-md-3">
               <%= image_tag("服務流程愛心圖.png", :alt => "不忙按摩")%>
-              <h3 class="title-info">4. 享受服務</h3>
-              <p class="content">專業的按摩師會準時前往服務，讓團隊每個人都能享有一段放鬆的時光！</p>
+              <h3>4. 享受服務</h3>
+              <p>專業的按摩師會準時前往服務，讓團隊每個人都能享有一段放鬆的時光！</p>
             </div>
+
           </div>
+        </div>
+      </div>
+    </div>
 
-<!--         </div>
-      </div> -->
+  </div>
+</div>
 
+
+<div id="story">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="slogan">
+          <h2>Best service for best employee.</h2>
+        </div>
+
+        <div class="slogan-link">
+          <a href="http://homepage.unbusymassage.tech/bookings/new" class="button">立即預約</a>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div id="story">
-    <div class="container">
-
-    <div class="slogan">
-      <h2>Best service for best employee.</h2>
-    </div>
-
-    <a href="http://homepage.unbusymassage.tech/bookings/new" class="button">立即預約</a>
-    </div>
-  </div>
+</div>
 
 <!--   <div id="footer">
 

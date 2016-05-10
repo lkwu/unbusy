@@ -3,64 +3,72 @@
 #index-top {
   background-image: image-url("header-background.png");
   background-size: cover;
-  margin:0px;
+  margin: 0 auto;
   padding:0px;
+  width: 100vw;
   height: 600px;
 }
 
-/* 以下隱藏部分移到app/stylesheets/body.scss */
-
-/*ul {
-  float: right;
-  margin: 0;
-  margin-top: 30px;
-  margin-right: 130px;
-}
-
-li {
-  float: left;
-  list-style-type: none;
-}
-
-a {
-  padding-left: 28px;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: lighter;
-  font-size:16px;
-  color:#3b2a1f;
-}*/
-
-
-#logo {
-  float: left;
-  display: block;
+#index-top .nav {
+  margin: 0 auto;
   position: relative;
-  margin-top: 191px;
-  margin-left: 149px;
+}
+
+#index-top .row {
+  margin: 0 auto;
+}
+
+#index-top .col-xs-12 {
+  margin: 0 auto;
+}
+
+.col-xs-12 ul {
+  position: absolute;
+  left: 59%;
+  width: 520px;
+  max-width: 100%;
+  padding: 0px;
+}
+
+#index-top .container .content {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 191px;
+  left: 136px;
+}
+
+#index-top .content .container.fluid {
+  width: 500px;
+  height: 250px;
+  padding: 0px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#index-top .logo {
+  display: block;
+  position: absolute;
   width: 323px;
   height: 66px;
 }
 
-#vision {
-  float: left;
-  position: absolute;
-  font-size: 20px;
-  margin-top: 280px;
-  margin-left: 149px;
-}
-
-#vision p {
+#index-top .col-xs-12 .vision p {
+  font-family:STHeitiTC;
+  font-size:20px;
+  color:#3b2a1f;
+  letter-spacing:1px;
+  line-height:30px;
+  text-align: left;
   text-shadow: 0px 1px 3px rgba(255,255,255,0.50);
+  position: absolute;
+  top: 92px;
 }
 
-#service {
-  float: left;
+#index-top .col-xs-12 .service {
   position: absolute;
-  margin-top: 370px;
-  margin-left: -385px;
-  display: inline-block; /*按鈕要有高度跟寬度*/
-  text-decoration: none; /*拿掉超連結的底線*/
+  top: 179px;
+  width: 410px;
 }
 
 a.booking {
@@ -94,35 +102,67 @@ a.download {
   background-size: cover;
   width: 100vw;
   height: 757px;
+}
+
+#specialty .container {
+  display: block;
+  width: 100vw;
+  height: 757px;
+  margin: 0 auto;
+}
+
+#specialty .content {
+  margin: 0 auto;
+  width: 1450px;
+  height: 610px;
+  padding: 0px;
   position: relative;
 }
 
+#specialty .container-fluid {
+  padding: 0px;
+}
+
+#specialty .row {
+  margin: 0 auto;
+}
+
 #specialty h2 {
-  margin-top: 0;
+  font-family: PingFangTC;
+  margin-top: 0 auto;
   padding-top: 70px;
-  font-size:36px;
-  color:#f26565;
-  text-align:center;
+  font-size: 36px;
+  color: #f26565;
+  text-align: center;
 }
 
-.image {
-  float: left;
-  width: 37.85%;
-  height: auto;
-  margin-left: 220px;
-}
-
-#introduction {
+#specialty .content .col-xs-12{
+  margin: 0 auto;
+  width: 97vw;
+  padding: 0px;
   position: absolute;
-  top: 27.74%;
-  left: 57.85%;
+  top: 5px;
+  left: 18px;
 }
 
-#introduction p {
+#specialty .introduction {
+  margin-top: 20px;
+}
+
+#specialty .introduction h3 {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+  font-size: 24px;
+  color: #f26565;
+  line-height: 36px;
+  text-align: left;
+}
+
+#specialty .introduction p {
   width: 457px;
   font-size: 20px;
   color: #635146;
   line-height: 30px;
+  text-align: left;
 }
 
 
@@ -131,37 +171,75 @@ a.download {
 #flow {
   width: 100vw;
   height: 645px;
-  position: relative;
   background-color: #ffffff;
+  position: relative;
+}
+
+#flow .container {
+  display: block;
+  width: 100vw;
+  height: 645px;
+  margin: 0 auto;
 }
 
 #flow h2 {
   margin-top: 0;
   padding-top: 76px;
+  padding-bottom: 74px;
   font-size:36px;
   color:#f26565;
   text-align:center;
 }
 
-.box .container {
-  padding-top: 63px;
+.category {
+  height: 400px;
+  width: 1250px;
+  margin: 0 auto;
 }
 
-.category img {
-  width: 68%;
-  height: auto;
-  margin-left: 42px;
+.category .container-fluid {
+  width: 1280px;
+  height: 400px;
+  margin: 0 auto;
 }
 
-.category h3 {
+.category .row {
+  height: 400px;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.category .col-xs-12 {
+  height: 400px;
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.category .col-md-3 {
+  width: 302.5px;
+  height: 342px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.category .col-md-3 img {
+  width: 169px;
+  height: 169px;
+  margin: 0 auto;
+  position: absolute;
+  left: 22%;
+}
+
+.category .col-md-3 h3 {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+  font-size: 24px;
+  color: #f26565;
+  line-height: 36px;
   text-align: center;
+  margin-top: 220px;
 }
 
-.title-info {
-  margin-top: 47px;
-}
-
-.content {
+.category .col-md-3 p {
   font-family:STHeitiTC-Light;
   font-size:20px;
   color:#635146;
@@ -179,18 +257,35 @@ a.download {
   background-size: cover;
   width: 100vw;
   height: 600px;
-  position: relative;
+  margin: 0 auto;
 }
 
-.slogan > h2 {
-  font-family:SourceHanSansTC-Normal;
+#story .container-fluid {
+  display: block;
+  width: 100vw;
+  height: 600px;
+  margin: 0 auto;
+}
+
+#story .container-fluid .col-xs-12 {
+  width: 100vw;
+  height: 600px;
+  margin: 0 auto;
+}
+
+#story .slogan h2 {
+  font-family:SourceHanSansTC;
   font-size: 31.14px;
   color: #a08373;
   letter-spacing: 1.6px;
   text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 31%;
+  margin-top: 237px;
+}
+
+#story .slogan-link {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 184px;
 }
 
 #story a {
@@ -204,9 +299,6 @@ a.download {
   text-decoration: none; /*拿掉超連結的底線*/
   text-align: center;
   font-size: 20px;
-  position: absolute;
-  top: 56%;
-  left: 43%;
 }
 
 /* footer */
