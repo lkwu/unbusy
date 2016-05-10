@@ -30,7 +30,7 @@ class Booking < ActiveRecord::Base
 
   def self.the_before_booking_day
     Booking.all.each do |b|
-      if (b.date - Time.now.to_date).to_i == 1
+      if (b.date - Time.now.to_date).to_i == 1 && b.paid
         # puts(b.id)
       # User.create!(email: "howclf@gmail.com", password: "123456123")
 
