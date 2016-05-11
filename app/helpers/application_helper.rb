@@ -2,7 +2,7 @@ module ApplicationHelper
 
   def generate_pay2go_params(payment)
       pay2go_params = {
-        MerchantID: "17464120",
+        MerchantID: "11825715",
         RespondType: "JSON",
         TimeStamp: payment.created_at.to_i,
         Version: "1.2",
