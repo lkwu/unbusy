@@ -1,2 +1,107 @@
-<h1> 管理者畫面 </h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unbusy</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<div id="admin_record">
+  <div class="container">
+
+    <h1> 客戶預約記錄 </h1>
+    <%= link_to "回首頁", root_path %>
+
+    <div class="success-record">
+      <h3>預約成功記錄</h3>
+
+      <table class="table table-hover">
+        <thead>`
+          <td>訂單編號</td>
+          <td>訂單時間</td>
+          <td>按摩師人數</td>
+          <td>訂單金額</td>
+          <td>公司名稱</td>
+          <td>聯絡人</td>
+          <td>E-mail</td>
+          <td>聯絡電話</td>
+          <td>地址</td>
+          <td>備註</td>
+        </thead>
+
+        <tbody>
+          <% @bookings.waiting.each do |booking| %>
+
+          <tr>
+            <td class="order-number"><%= link_to "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
+            <td><%= booking.date %> <%= booking.time %></td>
+            <td class="order-masseur"><%= booking.masseur %></td>
+            <td class="order-fee"><%= booking.fee %> 元</td>
+            <td><%= booking.company %></td>
+            <td><%= booking.username %></td>
+            <td><%= booking.contact_email %></td>
+            <td><%= booking.phone %></td>
+            <td><%= booking.address %></td>
+            <td><%= booking.remark %></td>
+          </tr>
+
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="serviced-record">
+      <h3>服務完成記錄</h3>
+
+      <table class="table table-hover">
+        <thead>
+          <td>訂單編號</td>
+          <td>訂單時間</td>
+          <td>按摩師人數</td>
+          <td>訂單金額</td>
+          <td>公司名稱</td>
+          <td>聯絡人</td>
+          <td>E-mail</td>
+          <td>聯絡電話</td>
+          <td>地址</td>
+          <td>備註</td>
+        </thead>
+
+        <tbody>
+          <% @bookings.expired.each do |booking| %>
+
+          <tr>
+            <td class="order-number"><%= link_to "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
+            <td><%= booking.date %> <%= booking.time %></td>
+            <td class="order-masseur"><%= booking.masseur %></td>
+            <td class="order-fee"><%= booking.fee %> 元</td>
+            <td><%= booking.company %></td>
+            <td><%= booking.username %></td>
+            <td><%= booking.contact_email %></td>
+            <td><%= booking.phone %></td>
+            <td><%= booking.address %></td>
+            <td><%= booking.remark %></td>
+          </tr>
+
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
 

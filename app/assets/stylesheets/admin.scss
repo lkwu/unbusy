@@ -1,0 +1,77 @@
+#admin_record {
+  width: 100vw;
+  height: 1092px;
+}
+
+#admin_record .container {
+  width: 95%;
+  height: 92%;
+  position: relative;
+}
+
+#admin_record .container > h1 {
+  font-family:PingFangTC-Medium;
+  font-size: 40px;
+  color: #635146;
+  text-align: center;
+  margin-top: 79px;
+  margin-bottom: 40px;
+}
+
+#admin_record .container a {
+  color: #635146;
+  padding-left: 28px;
+  padding-right: 28px;
+  float: right;
+}
+
+#admin_record table.table.table-hover {
+  width: 85%;
+}
+
+#admin_record h3 {
+  font-family:PingFangTC-Medium;
+  font-size:20px;
+  color:#f99595;
+  text-align:left;
+}
+
+#admin_record table.table.table-hover {
+  width:969px;
+  height:48px;
+}
+
+#admin_record table.table.table-hover thead {
+  background: #f99595;
+}
+
+#admin_record thead td {
+  font-family:PingFangTC;
+  font-size:18px;
+  color:#ffffff;
+  text-align:left;
+}
+
+.table-hover thead td:first-child {
+  border-top-left-radius: 10px;
+}
+
+.table-hover thead td:last-child {
+  border-top-right-radius: 10px;
+}
+
+#admin_record tbody {
+  font-family:PingFangTC;
+  font-size:18px;
+  color:#4e3629;
+  text-align:left;
+  border: 1px solid #ddd;
+}
+
+#booking_record tbody td.order-number {
+  font-family:PingFangTC;
+  font-size: 18px;
+  color: #f26565;
+  text-align: left;
+  text-decoration: underline;
+}
