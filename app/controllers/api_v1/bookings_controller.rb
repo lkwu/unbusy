@@ -25,7 +25,7 @@ class ApiV1::BookingsController < ApiController
 
   def index
     @user = User.find_by_authentication_token(params[:auth_token])
-    @expired_bookings = @user.bookings.expired 
+    @expired_bookings = @user.bookings.expired
     expired_bookings = []
     waiting_bookings = []
     @expired_bookings.find_each do |e|
@@ -61,8 +61,8 @@ class ApiV1::BookingsController < ApiController
                 }
     end
     render :json => { :expired_bookings => expired_bookings,
-                      :waiting_bookings => waiting_bookings } 
+                      :waiting_bookings => waiting_bookings }
   end
 
-  
+
 end

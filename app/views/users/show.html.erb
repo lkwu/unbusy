@@ -19,7 +19,7 @@
           <% current_user.bookings.waiting.each do |booking| %>
 
           <tr>
-            <td class="order-number"><%= "#14ACD" %></td>
+            <td class="order-number"><%= "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
             <td><%= booking.date %> <%= booking.time %></td>
             <td class="order-masseur"><%= booking.masseur %></td>
             <td class="order-fee"><%= booking.fee %> 元</td>
@@ -47,7 +47,7 @@
           <% current_user.bookings.expired.each do |booking| %>
 
           <tr>
-            <td class="order-number"><%= "#14ACD" %></td>
+            <td class="order-number"><%= "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
             <td><%= booking.date %> <%= booking.time %></td>
             <td class="order-masseur"><%= booking.masseur %></td>
             <td class="order-fee"><%= booking.fee %> 元</td>
