@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   	  user_path(current_user)
     elsif params[:booking_id]
       edit_user_path(current_user, :booking_id => params[:booking_id] )
-  	else
+    else
       request.env['omniauth.origin'] || stored_location_for(resource) || new_booking_path
     end
   end

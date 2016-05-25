@@ -28,6 +28,12 @@
           </div>
         </div>
 
+        <% if params[:booking_id] %>
+          <%= hidden_field_tag :booking_id, params[:booking_id] %>
+        <% elsif params[:look_bookings] %>
+          <%= hidden_field_tag :look_bookings, params[:look_bookings] %>
+        <%end%>
+
         <div class="actions">
           <%= f.submit "登入" %>
         </div>
