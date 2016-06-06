@@ -4,71 +4,44 @@
   background-image: image-url("header-background.png");
   background-size: cover;
   margin: 0 auto;
-  padding:0px;
-  width: 100vw;
-  height: 600px;
+  width: 100%;
+  height: 43em;
 }
 
-#index-top .nav {
+#index-top .container-fluid {
   margin: 0 auto;
-  position: relative;
+  width: 100%;
 }
 
-#index-top .row {
-  margin: 0 auto;
-}
-
-#index-top .col-xs-12 {
-  margin: 0 auto;
-}
-
-.col-xs-12 ul {
-  position: absolute;
-  left: 59%;
-  width: 520px;
+#index-top #nav ul {
+  width: 43em;
   max-width: 100%;
-  padding: 0px;
 }
 
-#index-top .container .content {
-  width: 500px;
-  height: 250px;
+#index-top .content {
+  width: 35.7em;
+  height: 17.8em;
   position: absolute;
-  top: 191px;
-  left: 136px;
-}
-
-#index-top .content .container.fluid {
-  width: 500px;
-  height: 250px;
-  padding: 0px;
-  margin: 0 auto;
-  position: relative;
-}
-
-#index-top .logo {
-  display: block;
-  position: absolute;
-  width: 323px;
-  height: 66px;
+  top: 15em;
+  left: 12%;
 }
 
 #index-top .col-xs-12 .vision p {
   font-family:STHeitiTC;
-  font-size:20px;
+  font-size: 1.43em;
   color:#3b2a1f;
   letter-spacing:1px;
   line-height:30px;
   text-align: left;
   text-shadow: 0px 1px 3px rgba(255,255,255,0.50);
   position: absolute;
-  top: 92px;
+  top: 4em;
 }
 
 #index-top .col-xs-12 .service {
   position: absolute;
-  top: 179px;
-  width: 410px;
+  top: 13em;
+  width: 30em;
 }
 
 a.booking {
@@ -100,68 +73,49 @@ a.download {
 #specialty {
   background-image: image-url("specialty-layer");
   background-size: cover;
-  width: 100vw;
-  height: 757px;
-}
-
-#specialty .container {
+  width: 100%;
   display: block;
-  width: 100vw;
-  height: 757px;
-  margin: 0 auto;
-}
-
-#specialty .content {
-  margin: 0 auto;
-  width: 1450px;
-  height: 610px;
-  padding: 0px;
-  position: relative;
 }
 
 #specialty .container-fluid {
-  padding: 0px;
-}
-
-#specialty .row {
+  width: 100%;
   margin: 0 auto;
 }
 
 #specialty h2 {
   font-family: PingFangTC;
-  margin-top: 0 auto;
-  padding-top: 70px;
-  font-size: 36px;
+  padding-top: 6%;
+  font-size: 2.57em;
   color: #f26565;
   text-align: center;
 }
 
-#specialty .content .col-xs-12{
-  margin: 0 auto;
-  width: 97vw;
-  padding: 0px;
-  position: absolute;
-  top: 5px;
-  left: 18px;
+#specialty .col-sm-6 {
+  margin-bottom: 5%;
 }
 
-#specialty .introduction {
-  margin-top: 20px;
+#specialty .col-sm-6 img.image {
+  width: 80%;
+}
+
+
+#specialty .col-sm-6 .introduction {
+  margin-top: 2%;
 }
 
 #specialty .introduction h3 {
   font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
-  font-size: 24px;
+  font-size: 1.7em;
   color: #f26565;
-  line-height: 36px;
+  line-height: 1.6em;
   text-align: left;
 }
 
 #specialty .introduction p {
-  width: 457px;
-  font-size: 20px;
+  width: 61%;
+  font-size: 1.43em;
   color: #635146;
-  line-height: 30px;
+  line-height: 1.6em;
   text-align: left;
 }
 
@@ -169,84 +123,54 @@ a.download {
 /* flow */
 
 #flow {
-  width: 100vw;
-  height: 645px;
+  width: 100%;
+  display: block;
   background-color: #ffffff;
-  position: relative;
 }
 
-#flow .container {
-  display: block;
-  width: 100vw;
-  height: 645px;
+#flow .container-fluid {
+  width: 100%;
   margin: 0 auto;
 }
 
 #flow h2 {
-  margin-top: 0;
-  padding-top: 76px;
-  padding-bottom: 74px;
-  font-size:36px;
-  color:#f26565;
-  text-align:center;
-}
-
-.category {
-  height: 400px;
-  width: 1250px;
-  margin: 0 auto;
-}
-
-.category .container-fluid {
-  width: 1280px;
-  height: 400px;
-  margin: 0 auto;
-}
-
-.category .row {
-  height: 400px;
-  width: 1280px;
-  margin: 0 auto;
-}
-
-.category .col-xs-12 {
-  height: 400px;
-  width: 1250px;
-  margin: 0 auto;
-}
-
-.category .col-md-3 {
-  width: 302.5px;
-  height: 342px;
-  position: relative;
-  margin: 0 auto;
-}
-
-.category .col-md-3 img {
-  width: 169px;
-  height: 169px;
-  margin: 0 auto;
-  position: absolute;
-  left: 22%;
-}
-
-.category .col-md-3 h3 {
-  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
-  font-size: 24px;
+  font-family: PingFangTC;
+  padding-top: 6%;
+  font-size: 2.57em;
   color: #f26565;
-  line-height: 36px;
   text-align: center;
-  margin-top: 220px;
 }
 
-.category .col-md-3 p {
-  font-family:STHeitiTC-Light;
-  font-size:20px;
+#flow .col-md-3 {
+  width: 22.66%;
+  margin: 0 auto;
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
+#flow .col-md-3 img {
+  width: 56%;
+  margin: 0 auto;
+  margin-left: 21%;
+}
+
+#flow .col-md-3 h3 {
+  font-family: "PingFang TC", "Lantinghei TC", "Hiragino Sans", "Microsoft Sans Serif","Open Sans", "Helvetica Neue", "Verdana", sans-serif;
+  font-size: 1.7em;
+  color: #f26565;
+  text-align: center;
+  margin-top: 20%;
+}
+
+#flow .col-md-3 p {
+  font-family: STHeitiTC-Light;
   color:#635146;
-  line-height:30px;
+  font-size: 1.44em;
+  line-height: 1.6em;
   text-align:center;
-  width: 263px;
-  margin-top: 20px;
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 20%;
 }
 
 
@@ -255,37 +179,36 @@ a.download {
 #story {
   background-image: image-url("story-layer");
   background-size: cover;
-  width: 100vw;
-  height: 600px;
+  width: 100%;
+  display: block;
   margin: 0 auto;
 }
 
 #story .container-fluid {
   display: block;
-  width: 100vw;
-  height: 600px;
+  width: 100%;
   margin: 0 auto;
 }
 
 #story .container-fluid .col-xs-12 {
-  width: 100vw;
+  width: 100%;
   height: 600px;
   margin: 0 auto;
 }
 
 #story .slogan h2 {
   font-family:SourceHanSansTC;
-  font-size: 31.14px;
+  font-size: 2.2em;
   color: #a08373;
-  letter-spacing: 1.6px;
+  letter-spacing: .05em;
   text-align: center;
-  margin-top: 237px;
+  margin-top: 7.7em;
 }
 
 #story .slogan-link {
   margin: 0 auto;
-  margin-top: 60px;
-  width: 184px;
+  margin-top: 4.3em;
+  width: 15%;
 }
 
 #story a {
@@ -318,7 +241,7 @@ a.download {
   padding-left: 149px;
 }
 
-#copyright {
+#footer .copyright {
   font-size: 13px;
   color:#fff6ed;
   letter-spacing:0px;

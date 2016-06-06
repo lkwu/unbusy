@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
 
   def check_admin
     unless current_user.admin
-      flash[:alert] = "您無權限造訪此頁面"
       redirect_to root_path
       return
     end

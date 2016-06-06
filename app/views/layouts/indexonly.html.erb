@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -14,17 +15,19 @@
 
 <%= yield %>
 
- <div id="footer">
+<div id="footer">
+  <div class="container-fluid">
+    <div class="col-xs-12">
+      <div class="please">
+        <p>和我們一起支持社會，讓世界變得更好</p>
+      </div>
 
-   <div class="please">
-    <p>和我們一起支持社會，讓世界變得更好</p>
-   </div>
-
-   <div id="copyright">
-    <p >&copy; 2016 Unbusy 不忙按摩</p>
-   </div>
-
- </div>
+      <div class="copyright">
+        <p >&copy; 2016 Unbusy 不忙按摩</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
