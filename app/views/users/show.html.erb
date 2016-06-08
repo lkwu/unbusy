@@ -1,71 +1,67 @@
 <div id="booking_record">
-  <div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2> 預約記錄 </h2>
 
-    <h2> 預約記錄 </h2>
+        <div class="success-record">
+          <h3>預約成功記錄</h3>
 
-    <div class="success-record">
-      <h3>預約成功記錄</h3>
+          <table class="table table-hover">
+            <thead>`
+              <td>預約編號</td>
+              <td>預約時間</td>
+              <td>按摩師人數</td>
+              <td>總費用</td>
+              <td>備註</td>
+            </thead>
 
-      <table class="table table-hover">
-        <thead>`
-          <td>預約編號</td>
-          <td>預約時間</td>
-          <td>按摩師人數</td>
-          <td>總費用</td>
-          <td>備註</td>
-        </thead>
+            <tbody>
+              <% current_user.bookings.waiting.each do |booking| %>
 
-        <tbody>
-          <% current_user.bookings.waiting.each do |booking| %>
+              <tr>
+                <td class="order-number"><%= "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
+                <td><%= booking.date %> <%= booking.time %></td>
+                <td class="order-masseur"><%= booking.masseur %></td>
+                <td class="order-fee"><%= booking.fee %> 元</td>
+                <td><%= booking.remark %></td>
+              </tr>
 
-          <tr>
-            <td class="order-number"><%= "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
-            <td><%= booking.date %> <%= booking.time %></td>
-            <td class="order-masseur"><%= booking.masseur %></td>
-            <td class="order-fee"><%= booking.fee %> 元</td>
-            <td><%= booking.remark %></td>
-          </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
 
-          <% end %>
-        </tbody>
-      </table>
+        <div class="serviced-record">
+          <h3>服務完成記錄</h3>
+
+          <table class="table table-hover">
+            <thead>
+              <td>預約編號</td>
+              <td>預約時間</td>
+              <td>按摩師人數</td>
+              <td>總費用</td>
+              <td>備註</td>
+            </thead>
+
+            <tbody>
+              <% current_user.bookings.expired.each do |booking| %>
+
+              <tr>
+                <td class="order-number"><%= "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
+                <td><%= booking.date %> <%= booking.time %></td>
+                <td class="order-masseur"><%= booking.masseur %></td>
+                <td class="order-fee"><%= booking.fee %> 元</td>
+                <td><%= booking.remark %></td>
+              </tr>
+
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-
-    <div class="serviced-record">
-      <h3>服務完成記錄</h3>
-
-      <table class="table table-hover">
-        <thead>
-          <td>預約編號</td>
-          <td>預約時間</td>
-          <td>按摩師人數</td>
-          <td>總費用</td>
-          <td>備註</td>
-        </thead>
-
-        <tbody>
-          <% current_user.bookings.expired.each do |booking| %>
-
-          <tr>
-            <td class="order-number"><%= "#{booking.id}#AC#{Rails.env.upcase[0]}" %></td>
-            <td><%= booking.date %> <%= booking.time %></td>
-            <td class="order-masseur"><%= booking.masseur %></td>
-            <td class="order-fee"><%= booking.fee %> 元</td>
-            <td><%= booking.remark %></td>
-          </tr>
-
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-
   </div>
 </div>
-
-
-
-
-
-
 
 
