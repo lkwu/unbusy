@@ -7,7 +7,7 @@
   border-radius: 6px;
 }
 
-#about-page .container {
+#about-page .container-fluid {
   width: 100%;
   height: 100%;
   padding: 15px;
@@ -17,8 +17,8 @@
 
 #about-page p {
   font-family: PingFangTC;
-  font-size: 14px;
+  font-size: 1em;
   color: #635146;
-  line-height: 24px;
+  line-height: 1.8em;
   text-align: left;
 }
