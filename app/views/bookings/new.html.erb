@@ -1,20 +1,20 @@
 <div id="flow-chart">
-  <div class="container">
+  <div class="container-fluid">
     <%= image_tag("flowchart-need.png", :class => "flow-chart") %>
   </div>
 </div>
 
 <div id="booking">
-  <div class="container">
-    <%=form_for @booking do |f| %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <%=form_for @booking do |f| %>
 
-      <div class="demand">
-        <p>填寫需求</p>
-      </div>
+        <div class="demand">
+          <p>填寫需求</p>
+        </div>
 
-      <div class="choice">
-        <div class="container">
-
+        <div class="choice">
           <div class="col-sm-6">
             <div class="date">
               <h4>選擇日期與時段</h4>
@@ -27,7 +27,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 col-sm-push-2">
+          <div class="col-sm-6">
             <div class="review"></div>
               <h4>填寫需求</h4>
               <div class="people">
@@ -67,9 +67,10 @@
             </div>
           </div>
         </div>
-      </div>
 
-    <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
 
