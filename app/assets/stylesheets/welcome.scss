@@ -15,6 +15,12 @@
   max-width: 100%;
 }
 
+@media (max-width: 767px) {
+  #index-top ul.nav.navbar-nav.navbar-right {
+    float: left !important;
+  }
+}
+
 #index-top ul.nav.navbar-nav.navbar-right li {
   margin-top: 10px;
 }
@@ -58,19 +64,23 @@
 }
 
 #index-top .content {
-  width: 35.7em;
+  width: 70%;
   height: 17.8em;
   position: absolute;
   top: 15em;
   left: 12%;
 }
 
+#index-top .logo img {
+  max-width: 53.5%;
+}
+
 #index-top .col-xs-12 .vision p {
-  font-family:STHeitiTC;
+  font-family: STHeitiTC;
   font-size: 1.43em;
-  color:#3b2a1f;
-  letter-spacing:1px;
-  line-height:30px;
+  color: #3b2a1f;
+  letter-spacing: 1px;
+  line-height: 150%;
   text-align: left;
   text-shadow: 0px 1px 3px rgba(255,255,255,0.50);
   position: absolute;
@@ -86,10 +96,10 @@
 #index-top .col-xs-12 .service a.booking {
   background: #f26565;
   border-radius: 6px;
-  padding: 15px 52px;
-  line-height:20px;
-  text-align:center;
-  font-size: 20px;
+  padding: .7em 3em;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 1.4em;
   color: #ffffff;
   text-decoration: none;
 }
@@ -97,13 +107,53 @@
 #index-top .col-xs-12 .service a.download {
   background: #383229;
   border-radius: 6px;
-  padding: 15px 28px 15px 39px;
-  margin-left: 31px;
-  line-height:20px;
-  text-align:center;
-  font-size: 20px;
-  color:#ffffff;
+  padding: .7em 1.3em .7em 1.5em;
+  margin-left: 7%;
+  line-height: 1.2em;
+  text-align: center;
+  font-size: 1.4em;
+  color: #ffffff;
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  #index-top .container-fluid {
+    background-size: 500%;
+  }
+
+  #index-top .logo img {
+    max-width: 90%;
+  }
+
+  #index-top .col-xs-12 .vision p {
+    font-size: 1.43em;
+    line-height: 150%;
+    text-align: left;
+    position: absolute;
+    top: 4em;
+  }
+
+  #index-top .col-xs-12 .service {
+    margin-top: 20%;
+    width: 100%;
+  }
+
+  #index-top .col-xs-12 .service a.booking {
+    padding: .7em 2.4em;
+    line-height: 1.2em;
+    font-size: 1.4em;
+    float: left;
+    margin-bottom: 5%;
+  }
+
+  #index-top .col-xs-12 .service a.download {
+    padding: .7em 1.3em .7em 1.5em;
+    margin-left: 7%;
+    line-height: 1.2em;
+    font-size: 1.4em;
+    float: left;
+    margin-left: 0%;
+  }
 }
 
 
@@ -130,14 +180,25 @@
 }
 
 
-
 #specialty .col-sm-6 img.image {
   width: 80%;
 }
 
+@media (max-width: 767px) {
+  #specialty .col-sm-6 img.image {
+    margin-left: 12%;
+    margin-top: 5%;
+  }
+}
 
 #specialty .col-sm-6 .introduction {
   margin-top: 2%;
+}
+
+@media (max-width: 767px) {
+  #specialty .col-sm-6 .introduction {
+    margin-left: 12%;
+  }
 }
 
 #specialty .introduction h3 {
@@ -156,6 +217,11 @@
   text-align: left;
 }
 
+@media (max-width: 767px) {
+  #specialty .introduction p {
+    width: 90%;
+  }
+}
 
 /* flow */
 
