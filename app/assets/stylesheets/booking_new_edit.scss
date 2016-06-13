@@ -16,6 +16,13 @@ body {
   margin-bottom: 4%;
 }
 
+@media (min-width: 319px) and (max-width: 767px) {
+  #flow-chart img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
 
 /* booking box */
 
