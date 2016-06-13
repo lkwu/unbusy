@@ -1,56 +1,60 @@
 <div id="flow-chart">
-  <div class="container">
-    <%= image_tag("flowchart-info.png", :class => "flow-chart") %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        </div>
+          <%= image_tag("flowchart-info.png", :class => "flow-chart") %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
 <div id="booking_user">
-  <div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
 
-    <p class="subtitle">填寫公司資料</p>
+        <p class="subtitle">填寫公司資料</p>
 
-    <table class="fill-form">
-      <%= form_for @booking do |u| %>
-      <tr>
-        <td><%= u.label :company, '公司名稱' %></td>
-        <td><%= u.text_field :company, placeholder: "公司或企業名稱" %></td>
-      </tr>
-      <tr>
-        <td><%= u.label :username, '聯絡人' %></td>
-        <td><%= u.text_field :username, placeholder: "王大明" %></td>
-      </tr>
-      <tr>
-        <td><%= u.label :phone, '聯絡電話' %></td>
-        <td><%= u.text_field :phone, placeholder: "0900123456" %></td>
-      </tr>
-      <tr>
-        <td><%= u.label :contact_email, '聯絡E-mail' %></td>
-        <td><%= u.text_field :contact_email, placeholder: "contact@unbusymassage.tech" %></td>
-      </tr>
-      <tr>
-        <td><%= u.label :address, '公司地址' %></td>
-        <td><%= u.text_field :address, placeholder: "請填寫完整的公司地址" %></td>
-      </tr>
-      <tr>
-        <td><%= u.label :remark, '備註' %></td>
-        <td><%= u.text_field :remark, class: "moretext", placeholder: "有其他需要都可以寫在這裡" %></td>
-      </tr>
+        <table class="fill-form">
+          <%= form_for @booking do |u| %>
+          <tr>
+            <td><%= u.label :company, '公司名稱' %></td>
+            <td><%= u.text_field :company, placeholder: "公司或企業名稱" %></td>
+          </tr>
+          <tr>
+            <td><%= u.label :username, '聯絡人' %></td>
+            <td><%= u.text_field :username, placeholder: "王大明" %></td>
+          </tr>
+          <tr>
+            <td><%= u.label :phone, '聯絡電話' %></td>
+            <td><%= u.text_field :phone, placeholder: "0900123456" %></td>
+          </tr>
+          <tr>
+            <td><%= u.label :contact_email, '聯絡E-mail' %></td>
+            <td><%= u.text_field :contact_email, placeholder: "contact@unbusymassage.tech" %></td>
+          </tr>
+          <tr>
+            <td><%= u.label :address, '公司地址' %></td>
+            <td><%= u.text_field :address, placeholder: "請填寫完整的公司地址" %></td>
+          </tr>
+          <tr>
+            <td><%= u.label :remark, '備註' %></td>
+            <td><%= u.text_field :remark, class: "moretext", placeholder: "有其他需要都可以寫在這裡" %></td>
+          </tr>
 
-      <%= hidden_field_tag :booking_id, params[:booking_id] %>
-    </table>
+          <%= hidden_field_tag :booking_id, params[:booking_id] %>
+        </table>
 
+        <div class="booking_user-button">
+          <%= u.submit "上一步", class: "back" %>
+          <%= u.submit "下一步", class: "forward" %>
+        </div>
 
-
-      <div class="go-back">
-        <%= u.submit "上一步", class: "back" %>
+        <% end %>
       </div>
-
-      <div class="go-forward">
-        <%= u.submit "下一步", class: "forward" %>
-      </div>
-
-
-      <% end %>
+    </div>
   </div>
 </div>
 

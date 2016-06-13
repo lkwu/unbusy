@@ -1,98 +1,121 @@
 #booking_user {
   margin: 0 auto;
-  width: 968px;
-  height: 740px;
+  width: 68%;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
-  position: relative;
-  z-index: 0;
 }
 
-#booking_user .container {
-  width: 76.22%;
-  height: 92%;
-  margin-left: 10.53%;
+#booking_user .container-fluid {
+  width: 100%
 }
 
-#booking_user .subtitle {
-  font-family:PingFangTC-Medium;
+#booking_user .col-xs-12 {
+  width: 100%;
+}
+
+#booking_user p {
+  font-family: PingFangTC-Medium;
   text-align: center;
-  font-size: 28px;
+  font-size: 2em;
   color: #635146;
-  position: absolute;
-  top: 5.4%;
-  left: 39.53%;
+  margin-top: 6%;
 }
 
-#booking_user .fill-form {
-  width: 85%;
-  height: 57%;
-  position: absolute;
-  top: 20.24%;
+#booking_user table.fill-form {
+  width: 90%;
+  margin-left: 9%;
+  margin-top: 5%;
 }
 
 #booking_user label {
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 3%;
+  margin-right: 7.7%;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1.15em;
   color: #635146;
-  line-height: 24px;
   float: right;
-  margin-right: 13px;
 }
 
 #booking_user input {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 3%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.15em;
   font-weight: 400;
-  line-height: 24px;
   border: 1px solid #b6b6b6;
   border-radius: 5px;
-  width: 281px;
-  height: 38px;
+  width: 63.6%;
+  height: 2.35em;
   float: left;
 }
 
+@media (min-width: 319px) and (max-width: 500px) {
+  #booking_user p {
+    font-size: 1.2em;
+  }
+  #booking_user table.fill-form {
+    margin-left: 3%;
+  }
+
+  #booking_user label {
+    font-size: .5em;
+  }
+
+  #booking_user input {
+    width: 100%;
+    font-size: .5em;
+  }
+}
+
+.booking_user-button {
+  width: 100%;
+  margin-top: 7%;
+  margin-left: 26%;
+}
+
 #booking_user input.back {
-  width: 184px;
-  height: 50px;
+  width: 23%;
+  height: 2.55em;
   background: #b0a097;
   border-radius: 6px;
   font-family: PingFangTC-Regular;
-  font-size: 20px;
+  font-size: 1.4em;
   font-weight: normal;
   color: #ffffff;
-  line-height: 20px;
   text-align: center;
-  position: absolute;
-  z-index: 1;
-  left: 28%;
-  bottom: 8%;
+  margin-right: 4%;
+  margin-bottom: 15%;
 }
 
 #booking_user input.forward {
-  width: 184px;
-  height: 50px;
+  width: 23%;
+  height: 2.55em;
   background: #f26565;
   border-radius: 6px;
   font-family: PingFangTC-Regular;
-  font-size: 20px;
+  font-size: 1.4em;
   font-weight: normal;
   color: #ffffff;
-  line-height: 20px;
   text-align: center;
-  position: absolute;
-  z-index: 1;
-  left: 49%;
-  bottom: 8%;
 }
 
+@media (min-width: 319px) and (max-width: 500px) {
+  .booking_user-button {
+    margin-left: 19%;
+  }
+  #booking_user input.back {
+    width: 30%;
+    font-size: .3em;
+  }
 
+  #booking_user input.forward {
+    width: 30%;
+    font-size: .3em;
+  }
+}
 
 
 
