@@ -11,71 +11,47 @@
 <body>
 
 <div id="top-header">
-  <div class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="home-logo">
+          <%= link_to( image_tag("top-header.png", :alt => "HOME LOGO"), welcome_index_path ) %>
+        </div>
 
-    <div id="home-logo">
-      <%= link_to( image_tag("top-header.png", :alt => "HOME LOGO"), welcome_index_path ) %>
+        <div id="nav">
+          <ul>
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to "登出", destroy_user_session_path, :method => :delete %>
+              <% end %>
+            </li>
+            <li>
+              <% if current_user && current_user.admin? %>
+                <%= link_to "管理員", welcome_index_path %>
+              <% end  %>
+            </li>
+            <li>
+              <%= link_to "服務說明", about_path %>
+            </li>
+            <li>
+              <%= link_to "各方評價", evaluate_path %>
+            </li>
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to "預約查詢", user_path(current_user) %>
+              <% else %>
+                <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div id="nav clearfix">
-      <ul>
-        <li>
-          <% if user_signed_in? %>
-            <%= link_to "登出", destroy_user_session_path, :method => :delete %>
-          <% end %>
-        </li>
-        <li>
-          <% if current_user && current_user.admin? %>
-            <%= link_to "管理員", welcome_index_path %>
-          <% end  %>
-        </li>
-        <li>
-          <%= link_to "服務說明", about_path %>
-        </li>
-        <li>
-          <%= link_to "各方評價", evaluate_path %>
-        </li>
-        <li>
-          <% if user_signed_in? %>
-            <%= link_to "預約查詢", user_path(current_user) %>
-          <% else %>
-            <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
-        </li>
-      </ul>
-    </div>
-
   </div>
 </div>
-
-<!-- <div id="header">
-  <div class="container clearfix">
-    <div id="nav clearfix">
-      <ul>
-        <li>
-          <%= link_to "服務說明", about_path %>
-        </li>
-        <li>
-          <%= link_to "各方評價" %>
-        </li>
-        <li>
-          <% if user_signed_in? %>
-            <%= link_to "預約查詢", user_path(current_user) %>
-          <% else %>
-            <%= link_to "預約查詢", user_session_path(:look_bookings => true) %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to '預約按摩', new_booking_path, :class =>"header_booking" %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div> -->
-
 
 <%= yield %>
 
