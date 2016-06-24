@@ -19,6 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 
+# set :output, 'log/cron.log' #設定log的路徑
+# env :PATH, ENV['PATH'] #要用bundle時必須要加
+
+# set :environment, 'production'
+# set :environment, :development
 
 every 1.day do
   runner "Booking.the_before_booking_day"
@@ -27,10 +32,10 @@ end
 every 1.minute do
   runner "Booking.the_delete_no_paid"
 end
+# every 1.minute do
+#   rake "dev:the_delete_no_paid"
+# end
 
-# env :PATH, ENV['PATH'] #要用bundle時必須要加
-
-# set :output, 'log/cron.log' #設定log的路徑
 
 # every 1.minute do
 #     rake "dev:jobs"
