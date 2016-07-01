@@ -15,14 +15,17 @@ class Pay2goController < ApplicationController
 
     if @check_code == result['CheckCode']
       @booking = Booking.find(result['ItemDesc'].split(' ').last.to_i)
-
+  
       @booking.paid = true
       @booking.save!
 
       UserMailer.notify_comment(@booking, current_user).deliver_later
+      redirect_to booking_path(@booking)
       # And then Pay2go will send a paid email to user
+    else
+      flash[:alert] = t["registration.error.failed_pay"]
+      redirect_to root_path
     end
-    redirect_to booking_path(@booking)
   end
 
   def notify #notifyURL: Pay2go用來通知店家後台交易成功
