@@ -5,7 +5,7 @@ class Pay2go
 
   def generate_pay2go_params
       pay2go_params = {
-        MerchantID: "11825715",
+        MerchantID: "17464120",
         RespondType: "JSON",
         TimeStamp: @payment.created_at.to_i,
         Version: "1.2",

@@ -29,7 +29,7 @@ every 1.day do
   runner "Booking.the_before_booking_day"
 end
 
-every 1.minute do
+every 1.hour do
   runner "Booking.the_delete_no_paid"
 end
 # every 1.minute do
