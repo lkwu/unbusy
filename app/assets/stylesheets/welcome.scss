@@ -16,6 +16,12 @@
 }
 
 @media (max-width: 767px) {
+  #index-top .container-fluid {
+    background: image-url("header-background.png");
+    background-size: cover;
+    background-position: 25%;
+  }
+
   #index-top ul.nav.navbar-nav.navbar-right {
     float: left !important;
   }
@@ -118,7 +124,7 @@
 
 @media (max-width: 500px) {
   #index-top .container-fluid {
-    background-size: 500%;
+    background-position: 40%;
   }
 
   #index-top .logo img {
