@@ -1,5 +1,7 @@
 class ApiV1::BookingsController < ApiController
 
+  include ApplicationHelper
+
   def create
      @user = User.find_by_authentication_token(params[:auth_token])
      @booking = Booking.new( :date => params[:date],
@@ -23,6 +25,21 @@ class ApiV1::BookingsController < ApiController
     end
   end
 
+  def checkout_pay2go
+    @user = User.find_by_authentication_token(params[:auth_token])
+    @booking = Booking.find_by( params[:id] )
+
+    if @booking.paid?
+      render :json => { :message => '已經付款'}, :status => 200
+    else
+      @payment = Payment.create!( :booking => params[:booking],
+                                  :payment_method => params[:payment_method],
+                                  :amount => params[:amount] )
+
+      # redirect_to "https://capi.pay2go.com/MPG/mpg_gateway"
+    end
+  end
+# 交易成功的網址 https://capi.pay2go.com/MPG/mpg_gateway/mpg_return_url?Status=SUCCESS
   def index
     @user = User.find_by_authentication_token(params[:auth_token])
     @expired_bookings = @user.bookings.expired
