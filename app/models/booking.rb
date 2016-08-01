@@ -33,7 +33,7 @@ class Booking < ActiveRecord::Base
       if (b.date - Time.now.to_date).to_i == 1 && b.paid
         # puts(b.id)
       # User.create!(email: "howclf@gmail.com", password: "123456123")
-
+      # else
         UserMailer.notify_comment(b, b.user).deliver_later!
       end  
     end

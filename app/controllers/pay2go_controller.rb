@@ -4,27 +4,28 @@ class Pay2goController < ApplicationController
 
   def return #returnURL: Pay2go用來通知使用者付款成功
     result = nil
-
     ActiveRecord::Base.transaction do
-      @payment = Payment.find_and_process( json_data )
-      result = @payment.save
+      # @payment = Payment.find_and_process( json_data )
+      resp = JSON.parse(params[:JSONData])
+      result = JSON.parse(resp['Result'])
+      pay2go_config = Rails.application.config_for(:pay2go)
+      chain = "Amt=#{result['Amt']}&MerchantID=#{'17464120'}&MerchantOrderNo=#{result['MerchantOrderNo']}&TradeNo=#{result['TradeNo']}"
+      @check_code = Digest::SHA256.hexdigest("HashIV=#{pay2go_config["hash_iv"]}&#{chain}&HashKey=#{pay2go_config["hash_key"]}").upcase
     end
 
-    unless result
-      flash[:alert] = t["registration.error.failed_pay"]
-    end
-
-    @booking = @payment.booking
-
-    if @payment.paid?
+    if @check_code == result['CheckCode']
+      @booking = Booking.find(result['ItemDesc'].split(' ').last.to_i)
+  
       @booking.paid = true
       @booking.save!
 
       UserMailer.notify_comment(@booking, current_user).deliver_later
+      redirect_to booking_path(@booking)
       # And then Pay2go will send a paid email to user
+    else
+      flash[:alert] = t["registration.error.failed_pay"]
+      redirect_to root_path
     end
-
-    redirect_to booking_path(@booking)
   end
 
   def notify #notifyURL: Pay2go用來通知店家後台交易成功

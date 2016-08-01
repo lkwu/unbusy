@@ -5,7 +5,7 @@ class Pay2go
 
   def generate_pay2go_params
       pay2go_params = {
-        MerchantID: "11825715",
+        MerchantID: "17464120",
         RespondType: "JSON",
         TimeStamp: @payment.created_at.to_i,
         Version: "1.2",
@@ -13,7 +13,7 @@ class Pay2go
         MerchantOrderNo: "#{@payment.id}AC#{Rails.env.upcase[0]}",
         Amt: @payment.booking.fee,
         ItemDesc: "Booking #{@payment.booking.id}",
-        ReturnURL: "http://localhost:3000/pay2go/return",
+        ReturnURL: "http://homepage.unbusymassage.tech/pay2go/return",
         NotifyURL: "http://requestb.in/1igs4w01",
         Email: @payment.booking.email,
         LoginType: 0,
