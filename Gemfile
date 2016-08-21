@@ -17,7 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 
 gem 'omniauth-facebook'
-gem "mysql2", '~> 0.3.18', :group => :production
+# gem "mysql2", '~> 0.3.18', :group => :production
+gem 'pg'
+gem 'rails_12factor', group: :production
 
 gem 'capistrano-rails', :group => :development
 gem 'capistrano-passenger', :group => :development
