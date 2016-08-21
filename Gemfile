@@ -18,8 +18,6 @@ gem 'devise'
 
 gem 'omniauth-facebook'
 # gem "mysql2", '~> 0.3.18', :group => :production
-gem 'pg'
-gem 'rails_12factor', group: :production
 
 gem 'capistrano-rails', :group => :development
 gem 'capistrano-passenger', :group => :development
@@ -56,6 +54,12 @@ gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development do
